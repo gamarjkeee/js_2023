@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <!---------------- Задача №6 ------------------->
+          <div class="page__task task">
+            <h3 class="task__title">Задача №6</h3>
+            <script>
+              "use strict";
+              let firstItemQuantity = parseInt(
+                prompt("Введіть кількість Чізбургерів")
+              );
+              let firstItemPrice = parseInt(
+                prompt("Введіть вартість Чізбургерів")
+              );
+              let secondItemQuantity = parseInt(
+                prompt("Введіть кількість Картоплі Фрі")
+              );
+              let secondItemPrice = parseInt(
+                prompt("Введіть вартість Картоплі Фрі")
+              );
+              let thirdItemQuantity = parseInt(
+                prompt("Введіть кількість Кока-Коли")
+              );
+              let thirdItemPrice = parseInt(
+                prompt("Введіть вартість Кока-Коли")
+              );
+
+              let firstItemSumm = firstItemQuantity * firstItemPrice;
+              let secondItemSumm = secondItemQuantity * secondItemPrice;
+              let thirdItemSumm = thirdItemQuantity * thirdItemPrice;
+              let totalSumm = firstItemSumm + secondItemSumm + thirdItemSumm;
+
+              document.write(
+                `Вартість Чізбургерів = ${firstItemSumm.toFixed(2)} грн</br>`
+              );
+              document.write(
+                `Вартість Картоплі Фрі = ${secondItemSumm.toFixed(2)} грн</br>`
+              );
+              document.write(
+                `Вартість Кока-Коли = ${thirdItemSumm.toFixed(2)} грн</br>`
+              );
+              document.write(
+                `Загальна вартість товарів = ${totalSumm.toFixed(2)} грн</br>`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

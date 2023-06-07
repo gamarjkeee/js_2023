@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02 task-2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <!---------------- Задача №2 ------------------->
+          <div class="page__task task">
+            <h3 class="task__title">Задача №2</h3>
+            <script>
+              "use strict";
+              const thisYear = 2023;
+              let bornYear = parseInt(prompt("Введіть рік вашого народження"));
+              if (bornYear >= thisYear) {
+                document.write(
+                  `Або Ви з майбутнього, або неправильно ввели рік Вашого народження. Оновіть сторінку щоб спробувати ще раз`
+                );
+              } else {
+                let result = thisYear - bornYear;
+                document.write(`Вам ${result} р.`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

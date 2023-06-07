@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <!---------------- Задача №5 ------------------->
+          <div class="page__task task">
+            <h3 class="task__title">Задача №5</h3>
+            <script>
+              "use strict";
+              let numberSeconds = parseInt(
+                prompt("Введіть кількість секунд, що пройшла від початку доби")
+              );
+
+              const MINUTE = 60;
+              const OUR = 3600;
+
+              let totalOurs = parseInt(numberSeconds / OUR);
+
+              let totalMinutes = parseInt(
+                (numberSeconds - totalOurs * 3600) / MINUTE
+              );
+
+              let totalSeconds =
+                numberSeconds - totalOurs * 3600 - totalMinutes * 60;
+
+              if (numberSeconds > 0) {
+                document.write(
+                  `Кількість секунд, що пройшла від початку доби = ${numberSeconds} </br>`
+                );
+                document.write(`Приводимо дані в норму</br>`);
+                document.write(`Кількість годин = ${totalOurs} год.</br>`);
+                document.write(`Кількість хвилин = ${totalMinutes} хв.</br>`);
+                document.write(`Кількість секунд = ${totalSeconds} с.</br>`);
+              } else {
+                document.write(
+                  `Час іди лише вперед. Задавайте лише додатні значення. Оновіть сторінку щоб спробувати ще раз `
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

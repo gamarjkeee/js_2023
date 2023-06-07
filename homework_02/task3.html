@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02 task-3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <!---------------- Задача №3 ------------------->
+          <div class="page__task task">
+            <h3 class="task__title">Задача №3</h3>
+            <script>
+              "use strict";
+              let quantity = parseInt(prompt("Введіть кільсть товару"));
+              let price = parseFloat(prompt("Введіть вартість товару"));
+              let taxesPercent = 5;
+
+              let summ = quantity * price;
+              let taxesSumm = (summ * 5) / 100;
+              if (quantity >= 0 && price >= 0) {
+                document.write(`Загальна вартість товару = ${summ} грн</br>`);
+                document.write(`Сума ПДВ = ${taxesSumm} грн</br>`);
+              } else {
+                document.write(
+                  `Ви вказали від'ємну кількість або вартість товару. Оновіть сторінку щоб спробувати ще раз`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

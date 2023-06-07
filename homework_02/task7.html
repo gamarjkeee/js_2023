@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <!---------------- Задача №7 ------------------->
+          <div class="page__task task">
+            <h3 class="task__title">Задача №7</h3>
+            <script>
+              "use strict";
+              let minMonth = 1;
+              let maxMonth = 12;
+              let randomMonth =
+                minMonth +
+                Math.floor(Math.random() * (maxMonth - minMonth + 1));
+              document.write(`Рандомний номер місяця - ${randomMonth} </br>`);
+
+              let minDay = 0;
+              let maxDay = 6;
+              let randomDay =
+                minDay + Math.floor(Math.random() * (maxDay - minDay + 1));
+              document.write(`Рандомний номер дня - ${randomDay} </br>`);
+
+              if (randomMonth === 1) {
+                document.write(`Ваш місяць - Січень </br>`);
+              } else if (randomMonth === 2) {
+                document.write(`Ваш місяць - Лютий </br>`);
+              } else if (randomMonth === 3) {
+                document.write(`Ваш місяць - Березень </br>`);
+              } else if (randomMonth === 4) {
+                document.write(`Ваш місяць - Квітень </br>`);
+              } else if (randomMonth === 5) {
+                document.write(`Ваш місяць - Травень </br>`);
+              } else if (randomMonth === 6) {
+                document.write(`Ваш місяць - Червень </br>`);
+              } else if (randomMonth === 7) {
+                document.write(`Ваш місяць - Липень </br>`);
+              } else if (randomMonth === 8) {
+                document.write(`Ваш місяць - Серпень </br>`);
+              } else if (randomMonth === 9) {
+                document.write(`Ваш місяць - Вересень </br>`);
+              } else if (randomMonth === 10) {
+                document.write(`Ваш місяць - Жовтень </br>`);
+              } else if (randomMonth === 11) {
+                document.write(`Ваш місяць - Листопад </br>`);
+              } else if (randomMonth === 12) {
+                document.write(`Ваш місяць - Грудень </br>`);
+              }
+
+              if (randomDay === 0) {
+                document.write(`Ваш день - Понеділок`);
+              } else if (randomDay === 1) {
+                document.write(`Ваш день - Вівторок`);
+              } else if (randomDay === 2) {
+                document.write(`Ваш день - Середа`);
+              } else if (randomDay === 3) {
+                document.write(`Ваш день - Четвер`);
+              } else if (randomDay === 4) {
+                document.write(`Ваш день - П'ятниця`);
+              } else if (randomDay === 5) {
+                document.write(`Ваш день - Субота`);
+              } else if (randomDay === 6) {
+                document.write(`Ваш день - Неділя`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

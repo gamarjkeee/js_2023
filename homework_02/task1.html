@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02 task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <!---------------- Задача №1 ------------------->
+          <div class="page__task task">
+            <h3 class="task__title">Задача №1</h3>
+            <script>
+              let firstNumber = parseFloat(
+                prompt("Введіть перше дійсне число")
+              );
+              let secondNumber = parseFloat(
+                prompt("Введіть друге дійсне число")
+              );
+
+              let summ = firstNumber + secondNumber;
+              let multiplication = firstNumber * secondNumber;
+              let division = firstNumber / secondNumber;
+
+              document.write(
+                `Перше дійсне число = ${firstNumber.toFixed(2)} </br>`
+              );
+              document.write(
+                `Друге дійсне число = ${secondNumber.toFixed(2)} </br>`
+              );
+              document.write(`Сума цих чисел = ${summ.toFixed(2)} </br>`);
+              document.write(
+                `Добуток цих чисел = ${multiplication.toFixed(2)} </br>`
+              );
+              if (secondNumber === 0) {
+                document.write(
+                  `Частка цих чисел = ${division.toFixed(
+                    2
+                  )} - НЕ діли на нуль, розбійник ти такий! </br>`
+                );
+              } else {
+                document.write(
+                  `Частка цих чисел = ${division.toFixed(2)} </br>`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
