@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №6</h3>
+            <div class="task__text">
+              Дано три дійсні змінні a, b і c. Скласти алгоритм, який міняє
+              місцями значення цих змінних наступним чином: змінна a набуває
+              значення змінної b, змінна b набуває значення змінної c, а змінна
+              c – попереднє значення змінної a.
+            </div>
+            <script>
+              "use strict";
+              let a = parseFloat(prompt(`Введіть значення значення "a"`));
+              let b = parseFloat(prompt(`Введіть значення значення "b"`));
+              let c = parseFloat(prompt(`Введіть значення значення "c"`));
+              let spareVariable;
+              document.write(
+                `Початкові значення знінних: a = ${a}, b = ${b}, c = ${c} </br>`
+              );
+
+              spareVariable = c;
+              c = a;
+              a = b;
+              b = spareVariable;
+
+              document.write(
+                `Значення знінних після перезаписуввання: a = ${a}, b = ${b}, c = ${c}`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

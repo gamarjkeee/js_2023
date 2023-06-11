@@ -19,24 +19,31 @@
           <!---------------- Задача №6 ------------------->
           <div class="page__task task">
             <h3 class="task__title">Задача №6</h3>
+            <div class="task__text">
+              З клавіатури вводяться вартість товару та кількість одиниць 3
+              товарів. Обчислити вартість кожного товару окремо та загальну
+              вартість. Вивести чек (як у супермаркеті) використовуючи елементи
+              розмітки.
+            </div>
+
             <script>
               "use strict";
-              let firstItemQuantity = parseInt(
+              let firstItemQuantity = parseFloat(
                 prompt("Введіть кількість Чізбургерів")
               );
-              let firstItemPrice = parseInt(
+              let firstItemPrice = parseFloat(
                 prompt("Введіть вартість Чізбургерів")
               );
-              let secondItemQuantity = parseInt(
+              let secondItemQuantity = parseFloat(
                 prompt("Введіть кількість Картоплі Фрі")
               );
-              let secondItemPrice = parseInt(
+              let secondItemPrice = parseFloat(
                 prompt("Введіть вартість Картоплі Фрі")
               );
-              let thirdItemQuantity = parseInt(
+              let thirdItemQuantity = parseFloat(
                 prompt("Введіть кількість Кока-Коли")
               );
-              let thirdItemPrice = parseInt(
+              let thirdItemPrice = parseFloat(
                 prompt("Введіть вартість Кока-Коли")
               );
 
@@ -46,16 +53,34 @@
               let totalSumm = firstItemSumm + secondItemSumm + thirdItemSumm;
 
               document.write(
-                `Вартість Чізбургерів = ${firstItemSumm.toFixed(2)} грн</br>`
-              );
-              document.write(
-                `Вартість Картоплі Фрі = ${secondItemSumm.toFixed(2)} грн</br>`
-              );
-              document.write(
-                `Вартість Кока-Коли = ${thirdItemSumm.toFixed(2)} грн</br>`
-              );
-              document.write(
-                `Загальна вартість товарів = ${totalSumm.toFixed(2)} грн</br>`
+                `     
+           <div class="mac">
+              <div class="mac__image">
+                <img src="./img/mcdonalds.png" alt="" />
+              </div>
+              <div class="mac__body">
+                <div class="mac__line">
+                  <span class="mac__name">Чізбургер</span><span>${firstItemQuantity} шт * ${firstItemPrice.toFixed(
+                  2
+                )} грн</span><span>${firstItemSumm.toFixed(2)} грн</span>
+                </div>
+                <div class="mac__line">
+                  <span class="mac__name">Картопля Фрі</span><span>${secondItemQuantity} шт * ${secondItemPrice.toFixed(
+                  2
+                )} грн</span><span>${secondItemSumm.toFixed(2)} грн</span>
+                </div>
+                <div class="mac__line">
+                  <span class="mac__name">Кока-Кола</span><span>${thirdItemQuantity} шт * ${thirdItemPrice.toFixed(
+                  2
+                )} грн</span><span>${thirdItemSumm.toFixed(2)} грн</span>
+                </div>
+                <div class="mac__line">
+                  <span>Сума замовлення</span><span>${totalSumm.toFixed(
+                    2
+                  )} грн</span>
+                </div>
+              </div>
+            </div>`
               );
             </script>
           </div>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №4</h3>
+            <div class="task__text">
+              З клавіатури вводиться вік дитини. Вивести на екран через скільки
+              років вона буде відвідувати садочок, піде у школу, закінчить
+              школу, вступить і закінчить
+            </div>
+            <script>
+              "use strict";
+              let childAge = parseInt(prompt("Введіть вік дитини"));
+              const kinderGardenStartAge = 3;
+              const schoolStartAge = 6;
+              const durationOfKinderGarding = 3;
+              const durationOfSchooling = 11;
+
+              let yearsTokinderGarden = kinderGardenStartAge - childAge;
+              let yearsToSchool = schoolStartAge - childAge;
+              let yearsInKinderGarden = schoolStartAge - childAge;
+              let yearsInSchool =
+                schoolStartAge + durationOfSchooling - childAge;
+
+              if (childAge >= 0) {
+                if (childAge < kinderGardenStartAge) {
+                  document.write(
+                    `Ваша дитина піде в садок через ${yearsTokinderGarden} р. і буде ходити туди ${durationOfKinderGarding} р.</br>`
+                  );
+                } else if (childAge === 3 || childAge === 4 || childAge === 5) {
+                  document.write(
+                    `Ваша дитина ходить в садочок і буде ходити ще ${yearsInKinderGarden} р.</br>`
+                  );
+                } else {
+                  document.write(
+                    `Ваша дитина вже закінчила дитячий садочок.</br>`
+                  );
+                }
+              } else {
+                document.write(
+                  `Ви ввели некоректне значення. Оновіть сторінку та впробуйте ще раз</br>`
+                );
+              }
+
+              if (childAge >= 0) {
+                if (childAge < schoolStartAge) {
+                  document.write(
+                    `Ваша дитина піде в школу через ${yearsToSchool} р. і буде ходити туди ${durationOfSchooling} р.</br>`
+                  );
+                } else if (childAge >= 6 && childAge <= 17) {
+                  document.write(
+                    `Ваша дитина ходить в школу і буде ходити ще ${yearsInSchool} р.</br>`
+                  );
+                } else {
+                  document.write(`Ваша дитина вже закінчила школу. </br>`);
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

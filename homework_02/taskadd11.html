@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-11</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №11</h3>
+            <div class="task__text">
+              Дано поточну кількість годи, хвилин, секунд (як на годиннику).
+              Визначити 1) яка кількість секунд буде на годиннику через N
+              секунд. 2) яка кількість хвилин буде на годиннику через N секунд,
+              X хвилин.
+            </div>
+            <script>
+              "use strict";
+              const SECOND = 1;
+              const MINUTE = 60;
+              const HOUR = 3600;
+              const DAY = 86400;
+
+              let hoursNow = parseInt(prompt(`Скільки годин?`));
+              let minutesNow = parseInt(prompt(`Скільки хвилин?`));
+              let secondsNow = parseInt(prompt(`Скільки секунд?`));
+
+              let minutesAdd = parseInt(prompt(`Скільки хвилин додамо?`));
+              let secondsAdd = parseInt(prompt(`Скільки секунд додамо?`));
+
+              let totalSecondsBefore =
+                hoursNow * HOUR + minutesNow * MINUTE + secondsNow * SECOND;
+              let totalSeconsAdd = minutesAdd * MINUTE + secondsAdd * SECOND;
+              let totalSecondsAfter = totalSecondsBefore + totalSeconsAdd;
+
+              let newDay, newHours, newMinutes, newSeconds;
+
+              if (
+                hoursNow >= 0 &&
+                hoursNow < 24 &&
+                minutesNow >= 0 &&
+                minutesNow < 60 &&
+                secondsNow >= 0 &&
+                secondsNow < 60 &&
+                minutesAdd >= 0 &&
+                secondsAdd >= 0
+              ) {
+                newDay = Math.floor(totalSecondsAfter / DAY);
+                newHours = Math.floor(
+                  (totalSecondsAfter - newDay * DAY) / HOUR
+                );
+                newMinutes = Math.floor(
+                  (totalSecondsAfter - (newDay * DAY + newHours * HOUR)) /
+                    MINUTE
+                );
+                newSeconds =
+                  totalSecondsAfter -
+                  newDay * DAY -
+                  newHours * HOUR -
+                  newMinutes * MINUTE;
+                if (newDay < 1) {
+                  document.write(
+                    `Початкові показники годинника ${hoursNow} год. ${minutesNow} хв. ${secondsNow} сек.</br>
+                  Ви додали ${minutesAdd} хв. та ${secondsAdd} сек.</br>
+                  Отримаємо час ${newHours} год. ${newMinutes} хв. ${newSeconds} сек.`
+                  );
+                } else {
+                  document.write(
+                    `Початкові показники годинника ${hoursNow} год. ${minutesNow} хв. ${secondsNow} сек.</br>
+                  Ви додали ${minutesAdd} хв. та ${secondsAdd} сек.</br>
+                  Отримаємо час ${newHours} год. ${newMinutes} хв. ${newSeconds} сек. І це вже буде інший день`
+                  );
+                }
+              } else {
+                document.write(
+                  `Ви ввели час некоректно. Оновіть сторінку та спробуйте ще раз`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

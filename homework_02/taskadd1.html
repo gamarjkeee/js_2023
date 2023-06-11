@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №1</h3>
+            <div class="task__text">
+              Дано ширину екрана та кількість елементів, які повинні бути
+              відображені у рядку. Визначити ширину елементів, які повинні бути
+              відображені у цьому рядку.
+            </div>
+            <script>
+              "use strict";
+              let widthScreen = parseInt(prompt("Введіть ширину екрану в px"));
+              let quantityItems = parseInt(
+                prompt("Введіть кількість елементів на екрані")
+              );
+
+              let widthItem = widthScreen / quantityItems;
+
+              document.write(
+                `При Вашій ширині екрану в ${widthScreen} px і кількості елементів ${quantityItems} - ширина елементів буде = ${Math.floor(
+                  widthItem
+                )} px`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

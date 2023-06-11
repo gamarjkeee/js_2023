@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №3</h3>
+            <div class="task__text">
+              З клавіатури вводяться вартість одиниці та кількість одиниць двох
+              товарів. Вивести на екран вартість кожного з видів товарів окремо
+              і загальну вартість.
+            </div>
+            <script>
+              "use strict";
+              let howManyCandies = parseFloat(
+                prompt("Введіть кількість цукерок (кг)")
+              );
+              let priceCandies = parseFloat(
+                prompt("Введіть вартість цукерок (грн/кг)")
+              );
+              let howManyCookies = parseFloat(
+                prompt("Введіть кількість печива (кг)")
+              );
+              let priceCookies = parseFloat(
+                prompt("Введіть вартість печива (грн/кг)")
+              );
+
+              let totalCandies = howManyCandies * priceCandies;
+              let totalCookies = howManyCookies * priceCookies;
+              let total = totalCandies + totalCookies;
+
+              document.write(
+                `Вартість цукерок ${totalCandies.toFixed(2)} грн </br>
+                 Вартість печива ${totalCookies.toFixed(2)} грн </br>
+                 Загальна вартість продуктів ${total.toFixed(2)} грн
+              `
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

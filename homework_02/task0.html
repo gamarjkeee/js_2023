@@ -19,23 +19,32 @@
           <!---------------- Задача №0 ------------------->
           <div id="task0" class="page__task task">
             <h3 class="task__title">Задача №0</h3>
+            <div class="task__text">
+              Обчислити значення виразів
+              <img src="./img/01.jpg" alt="" />
+            </div>
+
             <script>
               "use strict";
-              let a = 3;
-              let b = 51;
-              let c = 4;
+              let a = parseFloat(prompt("Введіть значення змінної а"));
+              let b = parseFloat(prompt("Введіть значення змінної b"));
+              let c = parseFloat(prompt("Введіть значення змінної c"));
+
+              document.write(` 
+              <div style="margin-bottom: 20px; ">При a = ${a}, b =${b}, c =${c}:</div>
+               `);
 
               let s1 = a + 12 + b;
-              document.write(`1) S1 = ${s1} </br>`);
+              document.write(`1) S1 = ${s1.toFixed(4)} </br>`);
 
               let s2 = Math.sqrt((a + b) / (2 * a));
-              document.write(`2) S2 = ${s2} </br>`);
+              document.write(`2) S2 = ${s2.toFixed(4)} </br>`);
 
               let s3 = Math.cbrt((a + b) * c);
-              document.write(`3) S3 = ${s3} </br>`);
+              document.write(`3) S3 = ${s3.toFixed(4)} </br>`);
 
               let s4 = Math.sin(a / -b);
-              document.write(`4) S4 = ${s4.toFixed(3)}`);
+              document.write(`4) S4 = ${s4.toFixed(4)}`);
             </script>
           </div>
         </div>

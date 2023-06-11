@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №7</h3>
+            <div class="task__text">
+              Скласти алгоритм, який обчислює цілу і дробову частину даного
+              числа х. Наприклад: число 23,56 => ціла: 23, дробова: 0,56.
+            </div>
+            <script>
+              "use strict";
+              let number = parseFloat(prompt(`Введіть число`));
+
+              if (number >= 0) {
+                let integerPartTypeOfNumber = Math.floor(number);
+                let fractionalPartTypeOfNumber =
+                  number - integerPartTypeOfNumber;
+                document.write(
+                  `Ви ввели чесло ${number}</br>
+                 Його ціла чистина = ${integerPartTypeOfNumber}</br>
+                 Його дробова чистина = ${fractionalPartTypeOfNumber.toFixed(5)}
+              `
+                );
+              } else {
+                let integerPartTypeOfNumber = Math.ceil(number);
+                let fractionalPartTypeOfNumber =
+                  number - integerPartTypeOfNumber;
+                document.write(
+                  `Ви ввели чесло ${number}</br>
+                 Його ціла чистина = ${integerPartTypeOfNumber}</br>
+                 Його дробова чистина = ${fractionalPartTypeOfNumber.toFixed(5)}
+              `
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

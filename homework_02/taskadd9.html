@@ -7,27 +7,25 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" />
     <script defer src="./js/script.js"></script>
-    <title>Homework_02 task-5</title>
+    <title>Homework_02+ task-9</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h2 class="header__title">Домашнє завдання №2</h2>
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
       </header>
       <main class="page">
         <div class="page__results">
-          <!---------------- Задача №5 ------------------->
           <div class="page__task task">
-            <h3 class="task__title">Задача №5</h3>
+            <h3 class="task__title">Додаткова задача №9</h3>
             <div class="task__text">
-              Дано кількість секунд, що пройшла від початку доби. Визначити
-              скільки це годин і хвилин.
+              Скласти програму для розв’язування задачі: йде N-а секунда доби,
+              визначити скільки повних годин і повних хвилин пройшло до цього
+              моменту.
             </div>
             <script>
               "use strict";
-              let numberSeconds = parseInt(
-                prompt("Введіть кількість секунд, що пройшла від початку доби")
-              );
+              let numberSeconds = parseInt(prompt(`Введіть номер секунди "N"`));
 
               const MINUTE = 60;
               const HOUR = 3600;
@@ -35,11 +33,11 @@
               let totalHours = Math.floor(numberSeconds / HOUR);
 
               let totalMinutes = Math.floor(
-                (numberSeconds - totalHours * 3600) / MINUTE
+                (numberSeconds - totalHours * HOUR) / MINUTE
               );
 
               let totalSeconds =
-                numberSeconds - totalHours * 3600 - totalMinutes * 60;
+                numberSeconds - totalHours * HOUR - totalMinutes * MINUTE;
 
               if (numberSeconds > 0) {
                 document.write(

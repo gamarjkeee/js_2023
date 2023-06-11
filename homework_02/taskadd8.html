@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-8</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №8</h3>
+            <div class="task__text">
+              Розробити програму (не використовувати if), яка за номером року Y
+              визначає номер століття C (врахувати, що початком XX століття був
+              1901, а не 1900 рік).
+            </div>
+            <script>
+              "use strict";
+              let numberOfYear = parseInt(prompt(`Введіть рік`));
+              let numberOfСentury;
+              if (numberOfYear > 0) {
+                numberOfСentury = numberOfYear / 100;
+                if (numberOfСentury === Math.floor(numberOfСentury)) {
+                  document.write(
+                    `Ви ввели ${numberOfYear} рік і це ${numberOfСentury} століття`
+                  );
+                } else {
+                  numberOfСentury = Math.floor(numberOfСentury) + 1;
+                  document.write(
+                    `Ви ввели ${numberOfYear} рік і це ${numberOfСentury} століття`
+                  );
+                }
+              } else {
+                numberOfСentury = (numberOfYear / 100) * -1;
+                if (numberOfСentury === Math.floor(numberOfСentury)) {
+                  document.write(
+                    `Ви ввели ${numberOfYear} рік і це ${+numberOfСentury} століття до нашої ери`
+                  );
+                } else {
+                  numberOfСentury = Math.floor(numberOfСentury) + 1;
+                  document.write(
+                    `Ви ввели ${numberOfYear} рік і це ${numberOfСentury} століття до нашої ери`
+                  );
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

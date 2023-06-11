@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-12</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №12</h3>
+            <div class="task__text">
+              З клавіатури вводиться кількість монет номіналом 2 копійки (5коп,
+              25коп, 50 коп). Визначити скільки гривень і копійок є у даній
+              сумі.
+            </div>
+            <script>
+              "use strict";
+
+              const DOLLAR = 100;
+              let kopecksOf2 = parseInt(
+                prompt(`Введіть кількість копійок номіналом 2`)
+              );
+              let kopecksOf5 = parseInt(
+                prompt(`Введіть кількість копійок номіналом 5`)
+              );
+              let kopecksOf25 = parseInt(
+                prompt(`Введіть кількість копійок номіналом 25`)
+              );
+              let kopecksOf50 = parseInt(
+                prompt(`Введіть кількість копійок номіналом 50`)
+              );
+
+              if (
+                kopecksOf2 >= 0 &&
+                kopecksOf5 >= 0 &&
+                kopecksOf25 >= 0 &&
+                kopecksOf50 >= 0
+              ) {
+                let total =
+                  kopecksOf2 * 2 +
+                  kopecksOf5 * 5 +
+                  kopecksOf25 * 25 +
+                  kopecksOf50 * 50;
+
+                let numberOfDollars = Math.floor(total / 100);
+                let numberOfkopecks = total - numberOfDollars * DOLLAR;
+                document.write(
+                  `
+                  У вас є копійки: </br> номіналом 2 - ${kopecksOf2} шт </br> номіналом 5 - ${kopecksOf5} шт </br> номіналом 25 - ${kopecksOf25} шт </br> номіналом 50 - ${kopecksOf50} шт </br>
+                  Це = ${numberOfDollars} грн ${numberOfkopecks} коп.`
+                );
+              } else {
+                document.write(
+                  `Ви ввели некоректні дані. Оновіть сторінку та спробуйте ще раз`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

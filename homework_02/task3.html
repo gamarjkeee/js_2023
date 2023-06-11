@@ -19,14 +19,18 @@
           <!---------------- Задача №3 ------------------->
           <div class="page__task task">
             <h3 class="task__title">Задача №3</h3>
+            <div class="task__text">
+              Дано вартість одиниці товару і кількість. Знайти загальну вартість
+              та ПДВ (5% від загальної вартості).
+            </div>
             <script>
               "use strict";
               let quantity = parseInt(prompt("Введіть кільсть товару"));
               let price = parseFloat(prompt("Введіть вартість товару"));
-              let taxesPercent = 5;
+              const TAXES_PERCENT = 5;
 
               let summ = quantity * price;
-              let taxesSumm = (summ * 5) / 100;
+              let taxesSumm = (summ * TAXES_PERCENT) / 100;
               if (quantity >= 0 && price >= 0) {
                 document.write(`Загальна вартість товару = ${summ} грн</br>`);
                 document.write(`Сума ПДВ = ${taxesSumm} грн</br>`);

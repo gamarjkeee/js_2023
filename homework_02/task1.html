@@ -19,37 +19,45 @@
           <!---------------- Задача №1 ------------------->
           <div class="page__task task">
             <h3 class="task__title">Задача №1</h3>
+            <div class="task__text">
+              Знайти суму, добуток та частку двох дійсних чисел. Результат
+              вивести у формі таблиці
+            </div>
             <script>
               let firstNumber = parseFloat(
-                prompt("Введіть перше дійсне число")
+                prompt(`Введіть перше дійсне число "a"`)
               );
               let secondNumber = parseFloat(
-                prompt("Введіть друге дійсне число")
+                prompt(`Введіть друге дійсне число "b"`)
               );
 
               let summ = firstNumber + secondNumber;
               let multiplication = firstNumber * secondNumber;
               let division = firstNumber / secondNumber;
 
-              document.write(
-                `Перше дійсне число = ${firstNumber.toFixed(2)} </br>`
-              );
-              document.write(
-                `Друге дійсне число = ${secondNumber.toFixed(2)} </br>`
-              );
-              document.write(`Сума цих чисел = ${summ.toFixed(2)} </br>`);
-              document.write(
-                `Добуток цих чисел = ${multiplication.toFixed(2)} </br>`
-              );
+              document.write(`
+              <table>
+              <tr>
+                <td>Числa</td>
+                <td>а = ${firstNumber}, b = ${secondNumber}</td>
+              </tr>
+              <tr>
+                <td>Сума чисел (а + b)</td>
+                <td>${summ.toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>Добуток чисел (а * b)</td>
+                <td>${multiplication.toFixed(2)}</td>
+              </tr>
+              <tr>
+                <td>Частка чисел (а / b)</td>
+                <td>${division.toFixed(2)}</td>
+              </tr>
+            </table>`);
+
               if (secondNumber === 0) {
                 document.write(
-                  `Частка цих чисел = ${division.toFixed(
-                    2
-                  )} - НЕ діли на нуль, розбійник ти такий! </br>`
-                );
-              } else {
-                document.write(
-                  `Частка цих чисел = ${division.toFixed(2)} </br>`
+                  `  <span style="color: red; font-weight: 700;">НЕ діли на нуль, розбійник ти такий!</span>`
                 );
               }
             </script>

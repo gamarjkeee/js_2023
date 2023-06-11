@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-15</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №15</h3>
+            <div class="task__text">
+              З клавіатури вводиться кількість місяців, які пройшли від деякого
+              моменту часу. Вивести повну кількість років і місяців. Наприклад,
+              дано 28 місяців, а вивести 2 роки і 4 місяці.
+            </div>
+            <script>
+              "use strict";
+              const YEAR = 12;
+              let totalNumberOfMonths = parseInt(
+                prompt(
+                  `Введіть кількість місяців, які пройшли від деякого моменту часу`
+                )
+              );
+              let numberOfYears = Math.floor(totalNumberOfMonths / YEAR);
+              let numberOfMonths = totalNumberOfMonths - numberOfYears * YEAR;
+              if (totalNumberOfMonths >= 0) {
+                document.write(
+                  `${totalNumberOfMonths} м. це = ${numberOfYears} р. і ${numberOfMonths} м.`
+                );
+              } else {
+                document.write(
+                  `Ви ввели некоректні дані. Оновіть сторінку та спробуйте ще раз`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

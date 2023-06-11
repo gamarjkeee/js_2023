@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-14</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №14</h3>
+            <div class="task__text">
+              З клавіатури вводиться номер дня тижня (від 1 до 7). Визначити
+              який буде день тижня через N днів.
+            </div>
+            <script>
+              "use strict";
+              const WEEK = 7;
+              let thisDay = parseInt(
+                prompt(`Введіть номер поточного дня (від 1 до 7)`)
+              );
+              let numberOfDaysAdd = parseInt(
+                prompt(`Введіть кількість днів які потрібно додати "N"`)
+              );
+              let thisDayName;
+              let totalNubmerOfDays;
+              let numberOfDayWillBe;
+              let nameOfDayWillBe;
+              if (thisDay > 0 && thisDay < 8 && numberOfDaysAdd >= 0) {
+                if (numberOfDaysAdd + thisDay === WEEK) {
+                  totalNubmerOfDays = thisDay + numberOfDaysAdd;
+                  numberOfDayWillBe = totalNubmerOfDays;
+                } else {
+                  totalNubmerOfDays = thisDay + numberOfDaysAdd;
+                  numberOfDayWillBe =
+                    totalNubmerOfDays -
+                    Math.floor(totalNubmerOfDays / WEEK) * WEEK;
+                }
+                switch (thisDay) {
+                  case 1:
+                    thisDayName = "Понеділок";
+                    break;
+                  case 2:
+                    thisDayName = "Вівторок";
+                    break;
+                  case 3:
+                    thisDayName = "Середа";
+                    break;
+                  case 4:
+                    thisDayName = "Четвер";
+                    break;
+                  case 5:
+                    thisDayName = "П'ятниця";
+                    break;
+                  case 6:
+                    thisDayName = "Субота";
+                    break;
+                  case 7:
+                    thisDayName = "Неділя";
+                    break;
+                }
+                switch (numberOfDayWillBe) {
+                  case 1:
+                    nameOfDayWillBe = "Понеділок";
+                    break;
+                  case 2:
+                    nameOfDayWillBe = "Вівторок";
+                    break;
+                  case 3:
+                    nameOfDayWillBe = "Середа";
+                    break;
+                  case 4:
+                    nameOfDayWillBe = "Четвер";
+                    break;
+                  case 5:
+                    nameOfDayWillBe = "П'ятниця";
+                    break;
+                  case 6:
+                    nameOfDayWillBe = "Субота";
+                    break;
+                  case 7:
+                    nameOfDayWillBe = "Неділя";
+                    break;
+                }
+                document.write(
+                  `Поточний день - ${thisDayName}, через ${numberOfDaysAdd} днів буде ${nameOfDayWillBe}`
+                );
+              } else {
+                document.write(
+                  `Значення поточного дня або днів які потрібно додати вказано некоректно. Оновіть сторінку та спробуйте ще раз`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

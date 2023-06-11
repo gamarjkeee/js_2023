@@ -19,6 +19,10 @@
           <!---------------- Задача №7 ------------------->
           <div class="page__task task">
             <h3 class="task__title">Задача №7</h3>
+            <div class="task__text">
+              Знайти суму випадкового номера місяця (від 1 до 12) та випадкового
+              номера дня (від 0 до 6).
+            </div>
             <script>
               "use strict";
               let minMonth = 1;
@@ -33,6 +37,9 @@
               let randomDay =
                 minDay + Math.floor(Math.random() * (maxDay - minDay + 1));
               document.write(`Рандомний номер дня - ${randomDay} </br>`);
+
+              let summ = randomMonth + randomDay;
+              document.write(`Їх сума = ${summ} </br>`);
 
               if (randomMonth === 1) {
                 document.write(`Ваш місяць - Січень </br>`);
@@ -56,7 +63,7 @@
                 document.write(`Ваш місяць - Жовтень </br>`);
               } else if (randomMonth === 11) {
                 document.write(`Ваш місяць - Листопад </br>`);
-              } else if (randomMonth === 12) {
+              } else {
                 document.write(`Ваш місяць - Грудень </br>`);
               }
 
@@ -72,7 +79,7 @@
                 document.write(`Ваш день - П'ятниця`);
               } else if (randomDay === 5) {
                 document.write(`Ваш день - Субота`);
-              } else if (randomDay === 6) {
+              } else {
                 document.write(`Ваш день - Неділя`);
               }
             </script>

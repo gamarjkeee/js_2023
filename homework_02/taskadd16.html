@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-16</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №16</h3>
+            <div class="task__text">
+              З клавіатури вводиться номер місяця. Визначити, який буде місяць
+              через вказану кількість N місяців.
+            </div>
+            <script>
+              "use strict";
+              const YEAR = 12;
+              let thisMonth = parseInt(
+                prompt(`Введіть номер поточного місяця (від 1 до 12)`)
+              );
+              let numberOfMonthsAdd = parseInt(
+                prompt(`Введіть кількість місяців які потрібно додати "N"`)
+              );
+              let thisMonthName;
+              let totalNubmerOfMonths;
+              let numberOfMonthWillBe;
+              let nameOfMonthWillBe;
+              if (thisMonth > 0 && thisMonth < 13 && numberOfMonthsAdd >= 0) {
+                if (numberOfMonthsAdd + thisMonth === YEAR) {
+                  totalNubmerOfMonths = thisMonth + numberOfMonthsAdd;
+                  numberOfMonthWillBe = totalNubmerOfMonths;
+                } else {
+                  totalNubmerOfMonths = thisMonth + numberOfMonthsAdd;
+                  numberOfMonthWillBe =
+                    totalNubmerOfMonths -
+                    Math.floor(totalNubmerOfMonths / YEAR) * YEAR;
+                }
+                switch (thisMonth) {
+                  case 1:
+                    thisMonthName = "січень";
+                    break;
+                  case 2:
+                    thisMonthName = "лютий";
+                    break;
+                  case 3:
+                    thisMonthName = "березень";
+                    break;
+                  case 4:
+                    thisMonthName = "квітень";
+                    break;
+                  case 5:
+                    thisMonthName = "травень";
+                    break;
+                  case 6:
+                    thisMonthName = "червень";
+                    break;
+                  case 7:
+                    thisMonthName = "липень";
+                    break;
+                  case 8:
+                    thisMonthName = "серпень";
+                    break;
+                  case 9:
+                    thisMonthName = "вересень";
+                    break;
+                  case 10:
+                    thisMonthName = "жовтень";
+                    break;
+                  case 11:
+                    thisMonthName = "листопад";
+                    break;
+                  case 12:
+                    thisMonthName = "грудень";
+                    break;
+                }
+                switch (numberOfMonthWillBe) {
+                  case 1:
+                    nameOfMonthWillBe = "січень";
+                    break;
+                  case 2:
+                    nameOfMonthWillBe = "лютий";
+                    break;
+                  case 3:
+                    nameOfMonthWillBe = "березень";
+                    break;
+                  case 4:
+                    nameOfMonthWillBe = "квітень";
+                    break;
+                  case 5:
+                    nameOfMonthWillBe = "травень";
+                    break;
+                  case 6:
+                    nameOfMonthWillBe = "червень";
+                    break;
+                  case 7:
+                    nameOfMonthWillBe = "липень";
+                    break;
+                  case 8:
+                    nameOfMonthWillBe = "серпень";
+                    break;
+                  case 9:
+                    nameOfMonthWillBe = "вересень";
+                    break;
+                  case 10:
+                    nameOfMonthWillBe = "жовтень";
+                    break;
+                  case 11:
+                    nameOfMonthWillBe = "листопад";
+                    break;
+                  case 12:
+                    nameOfMonthWillBe = "грудень";
+                    break;
+                }
+                document.write(
+                  `Поточний місяць - ${thisMonthName}, через ${numberOfMonthsAdd} місяців буде ${nameOfMonthWillBe}`
+                );
+              } else {
+                document.write(
+                  `Значення поточного місяця або місяців які потрібно додати вказано некоректно. Оновіть сторінку та спробуйте ще раз`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

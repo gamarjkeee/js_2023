@@ -7,33 +7,32 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" />
     <script defer src="./js/script.js"></script>
-    <title>Homework_02 task-2</title>
+    <title>Homework_02+ task-13</title>
   </head>
   <body>
     <div class="wrapper">
       <header class="header">
-        <h2 class="header__title">Домашнє завдання №2</h2>
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
       </header>
       <main class="page">
         <div class="page__results">
-          <!---------------- Задача №2 ------------------->
           <div class="page__task task">
-            <h3 class="task__title">Задача №2</h3>
+            <h3 class="task__title">Додаткова задача №13</h3>
             <div class="task__text">
-              Дано рік народження (дата: 1 січня) та поточний рік. Знайти
-              кількість років.
+              Визначити скільки повних тижнів є у вказаній кількості днів.
             </div>
             <script>
               "use strict";
-              const thisYear = 2023;
-              let bornYear = parseInt(prompt("Введіть рік вашого народження"));
-              if (bornYear >= thisYear) {
-                document.write(
-                  `Або Ви з майбутнього, або неправильно ввели рік Вашого народження. Оновіть сторінку щоб спробувати ще раз`
-                );
+              const WEEK = 7;
+              let numberOfDays = parseInt(prompt(`Введіть кількість днів`));
+              let numberOfWeeks;
+              if (numberOfDays >= 0) {
+                numberOfWeeks = Math.floor(numberOfDays / WEEK);
+                document.write(`кількість повних тижнів = ${numberOfWeeks}`);
               } else {
-                let result = thisYear - bornYear;
-                document.write(`Вам ${result} р.`);
+                document.write(
+                  `Кількість днів не може бути від'ємною. Оновіть сторінку та пробуйте ще раз`
+                );
               }
             </script>
           </div>

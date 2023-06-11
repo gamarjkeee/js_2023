@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_02+ task-2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h2 class="header__title">Домашнє завдання №2 (додатково)</h2>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <h3 class="task__title">Додаткова задача №2</h3>
+            <div class="task__text">
+              З клавіатури вводиться розмір заробітної плати та розмір
+              прожиткового мінімуму. Визначити розмір соціальної допомоги
+              (ввжаємо, що заробітна плата є меншою).
+            </div>
+            <script>
+              "use strict";
+              let salary = parseFloat(prompt("Введіть суму вашої ЗП"));
+              const MIN_INCOME = 8000;
+              let comparison = MIN_INCOME - salary;
+              if (comparison <= 0) {
+                document.write(
+                  `Розмір Вашої ЗП більши чи дорівню прожитковому мінімуму. Виплата соціальної допомоги непередбачена`
+                );
+              } else {
+                document.write(
+                  `Розмір Вашої ЗП менший прожиткового мінімуму. Розмір соціальної допомоги = ${comparison.toFixed(
+                    2
+                  )} грн`
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer__text">
+          <span>Курс JS 2023</span><span>виконав Мусієнко Руслан</span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
