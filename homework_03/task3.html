@@ -31,7 +31,7 @@
                 MIN_NUMBER +
                 Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1));
               let yourNumber = parseInt(
-                prompt(`Спробуте вгадати рандомне число від 1 до 5`)
+                prompt("Спробуте вгадати рандомне число від 1 до 5")
               );
               if (randomNumber === yourNumber) {
                 alert(
@@ -39,12 +39,12 @@
                 );
               } else {
                 let resalt = confirm(
-                  `Ви не вгадали. Бажаєте спробувати ще раз?`
+                  "Ви не вгадали. Бажаєте спробувати ще раз?"
                 );
                 if (resalt) {
                   yourNumber = parseInt(
                     prompt(
-                      `Спробуте вгадати рандомне число від 1 до 5. Спроба №2`
+                      "Спробуте вгадати рандомне число від 1 до 5. Спроба №2"
                     )
                   );
                   if (randomNumber === yourNumber) {

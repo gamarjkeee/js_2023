@@ -27,35 +27,32 @@
             <script>
               "use strict";
               const priceOfLotteryTicket = 4;
-              let checkAmount = parseFloat(prompt(`Введіть ціну товару`));
+              let checkAmount = parseFloat(prompt("Введіть ціну товару"));
               let howMuchMoneyDoYouHave = parseFloat(
-                prompt(`Скільки у вас грошей?`)
+                prompt("Скільки у вас грошей?")
               );
               let total = checkAmount + priceOfLotteryTicket;
               let resalt;
               if (checkAmount >= 0 && howMuchMoneyDoYouHave >= 0) {
                 if (howMuchMoneyDoYouHave >= total) {
                   resalt = confirm(
-                    `Бажаєте купити лотерейний білет за 4 грн? Джекпот більше 1 000 000 грн! `
+                    "Бажаєте купити лотерейний білет за 4 грн? Джекпот більше 1 000 000 грн!"
                   );
                   if (resalt) {
-                    alert(`Дякуємо за покупку. Бажаємо виграти Джекпот`);
+                    alert("Дякуємо за покупку. Бажаємо виграти Джекпот");
                   } else {
-                    alert(`Дякуємо за покупку. Приходьте ще`);
+                    alert("Дякуємо за покупку. Приходьте ще");
                   }
-                } else if (
-                  howMuchMoneyDoYouHave >= checkAmount &&
-                  howMuchMoneyDoYouHave < total
-                ) {
-                  alert(`Дякуємо за покупку. Приходьте ще`);
+                } else if (howMuchMoneyDoYouHave >= checkAmount) {
+                  alert("Дякуємо за покупку. Приходьте ще");
                 } else {
                   alert(
-                    `У вас недостатньо коштів. Чекаємо вас як отримаєте ЗП`
+                    "У вас недостатньо коштів. Чекаємо вас як отримаєте ЗП"
                   );
                 }
               } else {
                 alert(
-                  `Ви ввели некоректні значення. Оновіть сторінку щоб спробувати ще раз`
+                  "Ви ввели некоректні значення. Оновіть сторінку щоб спробувати ще раз"
                 );
               }
             </script>

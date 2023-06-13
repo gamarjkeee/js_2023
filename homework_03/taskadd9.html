@@ -29,10 +29,10 @@
               let fisrtLetter = prompt(
                 `Введіть першу літеру розширення файлу, який потрібно відкрити («html» - h,
               «doc» - d, «jpeg» - j, «mp3» - m, «xls» - x)`,
-                `m`
+                "m"
               );
               let result;
-              switch (fisrtLetter) {
+              switch (fisrtLetter.toLowerCase()) {
                 case "h":
                   result =
                     "«html» - скористайтеся будь яким браузером. Наприклад Google Chrome, Safari, Firefox";

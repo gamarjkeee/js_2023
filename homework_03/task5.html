@@ -27,11 +27,11 @@
             <script>
               "use strict";
               let userDriverCategory = prompt(
-                `Введіть категорію водія (A, В, С)`,
-                `A`
+                "Введіть категорію водія (A, В, С)",
+                "A"
               );
               let result;
-              switch (userDriverCategory) {
+              switch (userDriverCategory.toUpperCase()) {
                 case "A":
                   result = "мотоциклами";
                   break;
