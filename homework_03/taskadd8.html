@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03+ task-8</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3 (додатково)</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Додаткова задача №8</h3>
+            <div class="task__text">
+              З клавіатури вводиться кількість сторін багатокутника. Необхідно
+              вивести назву фігури («трикутник», «чотирикутник», «п’ятикутинк»,
+              «шестикутник»).
+            </div>
+            <script>
+              "use strict";
+              let value = parseInt(
+                prompt(
+                  `Введіть кількість сторін щоб дізнатися назву фігури (Від 3 до 6)`,
+                  4
+                )
+              );
+              let result;
+              switch (value) {
+                case 3:
+                  result = "трикутник";
+                  break;
+                case 4:
+                  result = "чотирикутник";
+                  break;
+                case 5:
+                  result = "п'ятикутник";
+                  break;
+                case 6:
+                  result = "шестикутник";
+                  break;
+                default:
+                  result =
+                    "невідома, так як Ви ввели дані які не входять в нашу область значень. Оновіть сторінку щоб спробувати ще раз";
+                  break;
+              }
+              document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Ваша фігура - ${result}
+                   </div>
+              </div>
+                  `);
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

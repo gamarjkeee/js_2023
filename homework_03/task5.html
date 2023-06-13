@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №5</h3>
+            <div class="task__text">
+              З клавіатури вводиться назва категорії водія (А-мотоцикл,
+              В-легковий автомобіль, С-вантажний автомобіль). Вивести на екран
+              назву транспортного засобу, яким він може керувати.
+            </div>
+            <script>
+              "use strict";
+              let userDriverCategory = prompt(
+                `Введіть категорію водія (A, В, С)`,
+                `A`
+              );
+              let result;
+              switch (userDriverCategory) {
+                case "A":
+                  result = "мотоциклами";
+                  break;
+                case "B":
+                  result = "легковими автомобілями";
+                  break;
+                case "C":
+                  result = "грузовими автомобілями";
+                  break;
+                default:
+                  result =
+                    "велосипедом. Ви некоректно ввели назву категорії. Оновіть сторінку щоб спробувати ще раз";
+                  break;
+              }
+              document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Можна керувати ${result}
+                 </div>
+            </div>`);
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

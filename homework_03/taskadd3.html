@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03+ task-3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3 (додатково)</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Додаткова задача №3</h3>
+            <div class="task__text">
+              Комп’ютер загадує число від 1 до 10. Двоє користувачів надають
+              свої відповіді. Виграє той, у кого число знаходиться ближче до
+              загаданого комп’ютером числа.
+            </div>
+            <script>
+              "use strict";
+              const MIN_NUMBER = 1;
+              const MAX_NUMBER = 10;
+              let randomNumber =
+                MIN_NUMBER +
+                Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1));
+              let firstUserNumber = parseInt(
+                prompt(`Гравець №1, введіть число від 1 до 10`, `5`)
+              );
+              let secondUserNumber = parseInt(
+                prompt(`Гравець №2, введіть число від 1 до 10`, `5`)
+              );
+              let errorFirstUserNumber;
+              let errorSecondUserNumber;
+
+              if (
+                firstUserNumber >= 1 &&
+                firstUserNumber <= 10 &&
+                secondUserNumber >= 1 &&
+                secondUserNumber <= 10
+              ) {
+                errorFirstUserNumber = Math.abs(randomNumber - firstUserNumber);
+                errorSecondUserNumber = Math.abs(
+                  randomNumber - secondUserNumber
+                );
+                if (errorFirstUserNumber < errorSecondUserNumber) {
+                  document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                 Гравець №1 переміг! Його число ${firstUserNumber} ближче до ${randomNumber} ніж число ${secondUserNumber} другого гравця.
+                   </div>
+              </div>
+                  `);
+                } else if (errorSecondUserNumber < errorFirstUserNumber) {
+                  document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                 Гравець №2 переміг! Його число ${secondUserNumber} ближче до ${randomNumber} ніж число ${firstUserNumber} першого гравця.
+                   </div>
+              </div>
+                  `);
+                } else {
+                  document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                 Нічия! Число ${firstUserNumber} першого гравця та ${secondUserNumber} другого знаходяться на однаковій відстані до ${randomNumber}.
+                   </div>
+              </div>
+                  `);
+                }
+              } else {
+                document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Ви ввели некоректні дані. Оновіть сторінку та спробуйте ще раз.
+                   </div>
+              </div>
+                  `);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

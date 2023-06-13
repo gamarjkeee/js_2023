@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03 task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №1</h3>
+            <div class="task__text">
+              З клавіатури вводяться імена двох дітей та кількість у них
+              цукерок. Вивести на екран ім’я тієї дитини, у якої кількість
+              цукерок є більшою, або вивести, що кількість однакова.
+            </div>
+            <script>
+              "use strict";
+              let firstChildName = prompt(
+                `Введіть ім'я першої дитини`,
+                `Ім'я 01`
+              );
+              let secondChildName = prompt(
+                `Введіть ім'я другої дитини`,
+                `Ім'я 02`
+              );
+              let numberOfCandiesFirstChild = parseInt(
+                prompt(`Введіть кількість цукерок в першої дитини`, `5`)
+              );
+              let numberOfCandiesSecondChild = parseInt(
+                prompt(`Введіть кількість цукерок в другої дитини`, `5`)
+              );
+              if (
+                numberOfCandiesFirstChild >= 0 &&
+                numberOfCandiesSecondChild >= 0
+              ) {
+                if (numberOfCandiesFirstChild > numberOfCandiesSecondChild) {
+                  document.write(`
+                <div class="result">
+              <div class="result__image">
+                <img src="./img/child_02.png" alt="Image" />
+              </div>
+              <div class="result__text">
+                В ${firstChildName} цукерок більше
+              </div>
+            </div>
+                `);
+                } else if (
+                  numberOfCandiesSecondChild > numberOfCandiesFirstChild
+                ) {
+                  document.write(`
+                <div class="result">
+              <div class="result__text">
+                В ${secondChildName} цукерок більше
+              </div>
+              <div class="result__image">
+                <img src="./img/child_01.png" alt="Image" />
+              </div>
+            </div>
+                `);
+                } else {
+                  document.write(`
+                <div class="result">
+                 <div class="result__image">
+                   <img src="./img/child_02.png" alt="Image" />
+                 </div>
+                 <div class="result__text">
+                  В дітей однаково цукерок
+                 </div>
+                 <div class="result__image">
+                  <img src="./img/child_01.png" alt="Image" />
+                 </div>
+            </div>
+                `);
+                }
+              } else {
+                document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ви ввели некоректні значення. Оновіть сторінку щоб спробувати ще раз
+                 </div>
+            </div>
+                `);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

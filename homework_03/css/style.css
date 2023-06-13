@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+.header {
+  background-color: rgba(26, 35, 39, 0.9);
+  padding: 20px 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+.header h1 {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.page {
+  background-color: #263238;
+  padding: 140px 15px;
+}
+.page__items {
+  max-width: 1270px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+.page__results {
+  max-width: 1270px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 30px;
+  background-color: #000000;
+}
+.page__title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.page__add-items {
+  max-width: 1270px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+}
+.item-page {
+  opacity: 0.65;
+  flex: 0 1 280px;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  gap: 30px;
+  padding: 15px;
+  border-radius: 30px;
+  transition-duration: 0.3s;
+}
+@media (any-hover: hover) {
+  .item-page:hover {
+    opacity: 1;
+  }
+}
+.item-page__title {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
+.item-page__text {
+  line-height: 1.5;
+  flex: 1 1 auto;
+}
+.wave-button {
+  margin: -15px;
+  width: 280px;
+  height: 60px;
+  display: flex;
+  border-radius: 0 0 30px 30px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.8s ease 0s;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+@media (any-hover: hover) {
+  .wave-button:hover {
+    transition: all 0.8s ease 0.2s;
+    box-shadow: 0 0 40px rgba(73, 115, 255, 0.6);
+  }
+  .wave-button:hover .wave-button__waves {
+    top: -50px;
+  }
+}
+.wave-button__text {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+  position: relative;
+  z-index: 1;
+}
+.wave-button__waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 280px;
+  background-color: #4973ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.8s ease 0s;
+}
+.wave-button__waves::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 250%;
+  height: 250%;
+  transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+  background-color: #000000;
+  border-radius: 48%;
+  animation: waves 5s infinite linear;
+}
+.wave-button__waves::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 250%;
+  height: 250%;
+  transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 44%;
+  animation: waves 10s infinite linear;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+  }
+}
+.task {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+.task__button {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+  background-color: #4973ff;
+  padding: 20px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-self: flex-start;
+  transition-duration: 0.3s;
+}
+@media (any-hover: hover) {
+  .task__button:hover {
+    box-shadow: 0 0 40px rgb(73, 115, 255);
+  }
+}
+.task__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+.task__text {
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+.result {
+  padding: 30px;
+  border-radius: 30px;
+  background-color: #263238;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.result__image {
+  max-width: 280px;
+}
+.result__image img {
+  max-width: 100%;
+}
+.result__text {
+  font-size: 22px;
+}
+
+.add-item-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  padding: 30px;
+  border-radius: 30px;
+  row-gap: 30px;
+  opacity: 0.65;
+  transition-duration: 0.3s;
+}
+@media (any-hover: hover) {
+  .add-item-page:hover {
+    opacity: 1;
+  }
+}
+.add-item-page__title {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.add-item-page__text {
+  line-height: 1.5;
+}
+.add-item-page__button {
+  background-color: #4973ff;
+  display: inline-flex;
+  align-self: flex-start;
+  color: #ffffff;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 5px;
+  border-radius: 15px;
+  transition-duration: 0.3s;
+}
+@media (any-hover: hover) {
+  .add-item-page__button:hover {
+    box-shadow: 0 0 20px rgb(73, 115, 255);
+  }
+}
+
+.footer {
+  background-color: rgba(26, 35, 39, 0.9);
+  padding: 10px 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.footer span:first-child {
+  font-size: 14px;
+  font-weight: 700;
+}
+.footer span:last-child {
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */

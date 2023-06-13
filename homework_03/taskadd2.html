@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03+ task-2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3 (додатково)</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Додаткова задача №2</h3>
+            <div class="task__text">
+              Комп’ютер випадковим чином вибирає початок і кінець проміжку
+              (проміжок повинен знаходитися в межах від 1 до 100). Користувач
+              вводить число і виграє, якщо число знаходиться у цьому проміжку,
+              або розташоване від нього (від лівого або правого краю) не більше
+              ніж на 10.
+            </div>
+            <script>
+              "use strict";
+              const MIN_NUMBER = 1;
+              const MAX_NUMBER = 100;
+              let firstRandomNumber =
+                MIN_NUMBER +
+                Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1));
+              let secondRandomNumber =
+                MIN_NUMBER +
+                Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1));
+              let deltaFirstRandomNumber;
+              let deltaSecondRandomNumber;
+              let userNumber = parseInt(
+                prompt(`Введіть будь яке число від 1 до 100`, `50`)
+              );
+
+              if (userNumber >= 1 && userNumber <= 100) {
+                if (firstRandomNumber > secondRandomNumber) {
+                  deltaFirstRandomNumber = firstRandomNumber + 10;
+                  deltaSecondRandomNumber = secondRandomNumber - 10;
+                  if (deltaFirstRandomNumber > 100) {
+                    deltaFirstRandomNumber = 100;
+                  }
+                  if (deltaSecondRandomNumber < 1) {
+                    deltaSecondRandomNumber = 1;
+                  }
+                  if (
+                    userNumber >= deltaSecondRandomNumber &&
+                    userNumber <= deltaFirstRandomNumber
+                  ) {
+                    document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                    Вітаємо. Ви виграли! Ваше число = ${userNumber}, а виграшний діапазон значень від ${deltaSecondRandomNumber} до ${deltaFirstRandomNumber}
+                   </div>
+              </div>
+                  `);
+                  } else {
+                    document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                    Нажаль Ви програли! Ваше число = ${userNumber}, а виграшний діапазон значень від ${deltaSecondRandomNumber} до ${deltaFirstRandomNumber}
+                   </div>
+              </div>
+                  `);
+                  }
+                } else {
+                  deltaFirstRandomNumber = firstRandomNumber - 10;
+                  deltaSecondRandomNumber = secondRandomNumber + 10;
+                  if (deltaSecondRandomNumber > 100) {
+                    deltaSecondRandomNumber = 100;
+                  }
+                  if (deltaFirstRandomNumber < 1) {
+                    deltaFirstRandomNumber = 1;
+                  }
+                  if (
+                    userNumber >= deltaFirstRandomNumber &&
+                    userNumber <= deltaSecondRandomNumber
+                  ) {
+                    document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                    Вітаємо. Ви виграли! Ваше число = ${userNumber}, а виграшний діапазон значень від ${deltaFirstRandomNumber} до ${deltaSecondRandomNumber}
+                   </div>
+              </div>
+                  `);
+                  } else {
+                    document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                    Нажаль Ви програли! Ваше число = ${userNumber}, а виграшний діапазон значень від ${deltaFirstRandomNumber} до ${deltaSecondRandomNumber}
+                   </div>
+              </div>
+                  `);
+                  }
+                }
+              } else {
+                document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Ви ввели некоректні дані. Оновіть сторінку та спробуйте ще раз.
+                   </div>
+              </div>
+                  `);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

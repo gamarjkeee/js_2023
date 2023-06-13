@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03+ task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3 (додатково)</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Додаткова задача №1</h3>
+            <div class="task__text">
+              <p>На екран виводиться меню:</p>
+              <ul>
+                <li>1) Веселий</li>
+                <li>2) Сумний</li>
+                <li>3) Обурений</li>
+              </ul>
+              <p>
+                Користувач вводить номер пункту меню і на екрані з’являється
+                відповідне зображення смайла.
+              </p>
+            </div>
+            <script>
+              "use strict";
+              let numberOfTypeOfsmile = parseInt(
+                prompt(
+                  `Обиріть номер смайла: 1) Веселий; 2) Сумний; 3) Обурений`,
+                  `1`
+                )
+              );
+              let result;
+              switch (numberOfTypeOfsmile) {
+                case 1:
+                  result = "🙂";
+                  break;
+                case 2:
+                  result = "😌";
+                  break;
+                case 3:
+                  result = "😡";
+                  break;
+                default:
+                  result =
+                    "Ви ввели некоректне значення. Оновіть сторінку та спробуйте ще раз";
+                  break;
+              }
+              alert(`${result}`);
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

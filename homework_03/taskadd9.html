@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03+ task-9</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3 (додатково)</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Додаткова задача №9</h3>
+            <div class="task__text">
+              З клавіатури вводиться перша літера розширення файлу («html»,
+              «doc», «jpeg», «mp3», «xls»). Вивести на екран назву програми, яка
+              може відкрити цей тип файлу.
+            </div>
+            <script>
+              "use strict";
+              let fisrtLetter = prompt(
+                `Введіть першу літеру розширення файлу, який потрібно відкрити («html» - h,
+              «doc» - d, «jpeg» - j, «mp3» - m, «xls» - x)`,
+                `m`
+              );
+              let result;
+              switch (fisrtLetter) {
+                case "h":
+                  result =
+                    "«html» - скористайтеся будь яким браузером. Наприклад Google Chrome, Safari, Firefox";
+                  break;
+                case "d":
+                  result =
+                    "«doc» - скористайтеся Microsoft Office Word або LibreOffice";
+                  break;
+                case "j":
+                  result =
+                    "«jpeg» - скористайтеся будь яким графічним редактором. Наприклад XnView, FastPictureViewer, Adobe Photoshop";
+                  break;
+                case "m":
+                  result =
+                    "«mp3» - скористайтеся будь яким музичним програвачем. Наприклад Dopamine, Winamp, MusicBee";
+                  break;
+                case "x":
+                  result =
+                    "«xls» - скористайтеся будь яким редактором. Наприклад Excel, LibreOffice, Apache OpenOffice";
+                  break;
+                default:
+                  result =
+                    "вкажіть спочатку його правильно. Оновіть сторінку та спробуйте ще раз";
+                  break;
+              }
+              document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Для того щоб відкрити вказаний тип файлу ${result}
+                   </div>
+              </div>
+                  `);
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

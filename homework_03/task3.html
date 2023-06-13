@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03 task-3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №3</h3>
+            <div class="task__text">
+              Випадковим чином генерується число від 1 до 5. Спробуйте вгадати
+              число за 2 спроби.
+            </div>
+            <script>
+              "use strict";
+              const MIN_NUMBER = 1;
+              const MAX_NUMBER = 5;
+              let randomNumber =
+                MIN_NUMBER +
+                Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1));
+              let yourNumber = parseInt(
+                prompt(`Спробуте вгадати рандомне число від 1 до 5`)
+              );
+              if (randomNumber === yourNumber) {
+                alert(
+                  `Ви вгадали з першої спроби 🤗 Рандомне число ${randomNumber}`
+                );
+              } else {
+                let resalt = confirm(
+                  `Ви не вгадали. Бажаєте спробувати ще раз?`
+                );
+                if (resalt) {
+                  yourNumber = parseInt(
+                    prompt(
+                      `Спробуте вгадати рандомне число від 1 до 5. Спроба №2`
+                    )
+                  );
+                  if (randomNumber === yourNumber) {
+                    alert(
+                      `Ви вгадали з другої спроби 🤗 Рандомне число ${randomNumber}`
+                    );
+                  } else {
+                    alert(
+                      `Ви не вгадали. Повезе в коханні! 🥰 Рандомне число ${randomNumber}`
+                    );
+                  }
+                } else {
+                  alert(`Ну як хочете 😌`);
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

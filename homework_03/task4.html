@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03 task-4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №4</h3>
+            <div class="task__text">
+              З клавіатури вводиться вік людини. Вивести на екран ким він є
+              (дитиною у садочку, школярем, студентом, працівником,
+              пенсіонером).
+            </div>
+            <script>
+              "use strict";
+              let userAge = parseInt(prompt(`Введіть вік людини`));
+              if (userAge >= 0 && userAge < 140) {
+                if (userAge < 3) {
+                  document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ця людина - немовля
+                 </div>
+                 <div class="result__image">
+                   <img src="./img/baby.png" alt="Image" />
+                 </div>
+            </div>`);
+                } else if (userAge < 6 && userAge >= 3) {
+                  document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ця людина - дитина у садочку
+                 </div>
+                 <div class="result__image">
+                   <img src="./img/kinder_garden.png" alt="Image" />
+                 </div>
+            </div>`);
+                } else if (userAge < 18 && userAge >= 6) {
+                  document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ця людина - школяр
+                 </div>
+                 <div class="result__image">
+                   <img src="./img/school.png" alt="Image" />
+                 </div>
+            </div>`);
+                } else if (userAge < 24 && userAge >= 18) {
+                  document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ця людина - студент
+                 </div>
+                 <div class="result__image">
+                   <img src="./img/student.png" alt="Image" />
+                 </div>
+            </div>`);
+                } else if (userAge < 61 && userAge >= 24) {
+                  document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ця людина - працівник
+                 </div>
+                 <div class="result__image">
+                   <img src="./img/worker.png" alt="Image" />
+                 </div>
+            </div>`);
+                } else {
+                  document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ця людина - пенсіонер
+                 </div>
+                 <div class="result__image">
+                   <img src="./img/pensioner.png" alt="Image" />
+                 </div>
+            </div>`);
+                }
+              } else {
+                document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ви ввели некоректні значення. Оновіть сторінку щоб спробувати ще раз
+                 </div>
+            </div>
+                `);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

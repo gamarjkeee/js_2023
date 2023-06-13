@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03+ task-7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3 (додатково)</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Додаткова задача №7</h3>
+            <div class="task__text">
+              <p>Гра в кості. Правила гри:</p>
+              <ul>
+                <li>
+                  1) користувач може кинути кості не більше двох разів
+                  (користувач сам вирішує чи робити, чи не робити другий кидок);
+                </li>
+                <li>
+                  2) якщо випадає парне число, то кількість балів збільшується
+                  на це число;
+                </li>
+                <li>
+                  3) якщо випадає непарне число, то кількість балів зменшується
+                  на це число;
+                </li>
+                <li>4) виграє той, у кого кількість балів більша.</li>
+              </ul>
+            </div>
+            <script>
+              "use strict";
+              const MIN_VALUE = 1;
+              const MAX_VALUE = 6;
+              let firstRandomValue;
+              let secondRandomValue;
+              let totalScore;
+              let firstAttempt = confirm(
+                `Ви готові кидати кості? Тиснемо ОК для першої спроби`
+              );
+              let secondAttempt;
+              if (firstAttempt) {
+                firstRandomValue =
+                  MIN_VALUE +
+                  Math.floor(Math.random() * (MAX_VALUE - MIN_VALUE + 1));
+                if (firstRandomValue / 2 === Math.floor(firstRandomValue / 2)) {
+                  totalScore = firstRandomValue;
+                } else {
+                  totalScore = -firstRandomValue;
+                }
+                secondAttempt = confirm(
+                  `На кубику випало число ${firstRandomValue}, Ви отримуєте ${totalScore} балів. Робимо другу спробу? `
+                );
+                if (secondAttempt) {
+                  secondRandomValue =
+                    MIN_VALUE +
+                    Math.floor(Math.random() * (MAX_VALUE - MIN_VALUE + 1));
+                  if (
+                    secondRandomValue / 2 ===
+                    Math.floor(secondRandomValue / 2)
+                  ) {
+                    totalScore = totalScore + secondRandomValue;
+                  } else {
+                    totalScore = totalScore - secondRandomValue;
+                  }
+                  alert(
+                    `На кубику випало число ${secondRandomValue}, в сумі маєте ${totalScore} балів.`
+                  );
+                  document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Ваша сума балів = ${totalScore}. Оновіть сторінку для наступної спроби.
+                   </div>
+              </div>
+                  `);
+                } else {
+                  document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Ви відмовилися від другої спроби. Ваша сума балів = ${totalScore}. Оновіть сторінку для наступної спроби.
+                   </div>
+              </div>
+                  `);
+                }
+              } else {
+                document.write(`
+                  <div class="result">
+                   <div class="result__text">
+                  Так не весело! Оновіть сторінку та зіграйте
+                   </div>
+              </div>
+                  `);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

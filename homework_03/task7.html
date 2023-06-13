@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_03 task-7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №3</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №7</h3>
+            <div class="task__text">
+              З клавіатури вводиться номер місяця. Вивести до якої пори він
+              відноситься.
+            </div>
+            <script>
+              "use strict";
+              let numberOfMonth = parseInt(
+                prompt(`Введіть номер місяця (від 1 до 12)`, `7`)
+              );
+              let nameOfSeason;
+              if (numberOfMonth >= 1 && numberOfMonth < 13) {
+                if (
+                  numberOfMonth === 12 ||
+                  (numberOfMonth >= 1 && numberOfMonth < 3)
+                ) {
+                  nameOfSeason = "ЗИМА";
+                } else if (numberOfMonth >= 3 && numberOfMonth < 6) {
+                  nameOfSeason = "ВЕСНА";
+                } else if (numberOfMonth >= 6 && numberOfMonth < 9) {
+                  nameOfSeason = "ЛІТО";
+                } else {
+                  nameOfSeason = "ОСІНЬ";
+                }
+                document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ваш місяць належить до пори року - ${nameOfSeason}
+                 </div>
+            </div>`);
+              } else {
+                document.write(`
+                <div class="result">   
+                 <div class="result__text">
+                  Ви ввели некоректні дані. Оновіть сторінку щоб спробувати ще раз.
+                 </div>
+            </div>`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>
