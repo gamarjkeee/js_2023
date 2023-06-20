@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-13</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №13</h3>
+            <div class="task__text">
+              Морський бій. Комп’ютер випадково розташовує одиночний корабель на
+              полі розміром N*M. Маючи К снарядів користувач намагається
+              потопити корабель.
+            </div>
+            <script>
+              "use strict";
+              const widthNumber = parseInt(
+                prompt("Введіть кількість клітинок по горизонталі")
+              );
+              const heightNumber = parseInt(
+                prompt("Введіть кількість клітинок по вертикалі")
+              );
+              let numberOfAttempts = parseInt(
+                prompt("Введіть кількість спроб")
+              );
+              const numberOfCells = widthNumber * heightNumber;
+              const cellWithShip =
+                1 + Math.floor(Math.random() * numberOfCells);
+              let userCell;
+              do {
+                userCell = parseInt(
+                  prompt("Вкажіть номер клітинки по якій нанесемо удар")
+                );
+                numberOfAttempts--;
+              } while (userCell !== cellWithShip && numberOfAttempts > 0);
+              if (userCell === cellWithShip) {
+                alert("Ви потопили корабель");
+              } else {
+                alert(`Ви програли. Корабель був в клітинці №${cellWithShip}`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

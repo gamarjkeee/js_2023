@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №1</h3>
+            <div class="task__text">
+              Вивести з використанням циклів маркований список з випадковими
+              числами (1-100). Кількість випадкових чисел вводиться
+              користувачем.
+            </div>
+            <script>
+              "use strict";
+              let howManyItems = parseInt(
+                prompt("Скільки разів вивести рандомне число?")
+              );
+              while (howManyItems > 0) {
+                let randomNumber = 1 + Math.floor(Math.random() * 100);
+                document.write(` 
+                <div class="task1">
+              <span class="task1__circle"></span><span>${randomNumber}</span>
+            </div>
+            `);
+                howManyItems -= 1;
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

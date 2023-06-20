@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-14</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №14</h3>
+            <div class="task__text">
+              Каса. Користувачу повідомляють суму, яку йому треба сплатити.
+              Користувач поступово вводить суму грошей до тих пір, поки суми не
+              буде достатньо для оплати товарів (кожного разу користувачу
+              повідомляють, яку ще суму потрібно ввести).
+            </div>
+            <script>
+              "use strict";
+              const total = 100 + Math.floor(Math.random() * (500 - 100 + 1));
+              let remainder = total;
+              let userSumm;
+              alert(`Cума чеку = ${total}грн`);
+              do {
+                userSumm = parseFloat(prompt("Введіть суму яку хочете внести"));
+                remainder -= userSumm;
+                if (remainder > 0) {
+                  alert(`До сплати залишилося ${remainder}грн`);
+                } else if (remainder === 0) {
+                  alert("Товар оплачено");
+                } else {
+                  alert("Товар оплачено, не забудьте забрати решту");
+                }
+              } while (remainder > 0);
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

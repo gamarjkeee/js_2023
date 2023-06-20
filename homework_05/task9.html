@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-9</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №9</h3>
+            <div class="task__text">
+              Користувач загадує число. Комп’ютер задає питання поки не вгадає
+              число користувача (використати confirm).
+            </div>
+            <script>
+              "use strict";
+              alert("Загадайте число від 1 до 10");
+              let randomNumber;
+              let didCompGuess;
+              let count = 0;
+              // Тут також треба було б створити масив і записувати туди вже показані "randomNumber",
+              // а потім з наступною ітерацією порівнювати новий randomNumber з усіма попередніми, і якщо від дорівнює
+              // хоча б одному з них - робити новий randomNumber. Але ми ще не вчили масиви і методи їх перебору.
+              // тому вгадувані числа можуть повторюватися
+              do {
+                randomNumber = 1 + Math.floor(Math.random() * 10);
+                didCompGuess = confirm(`${randomNumber} це ваше число?`);
+                count += 1;
+              } while (didCompGuess != true);
+              if (didCompGuess) {
+                alert(`Комп'ютер відгадав Ваше число з ${count} спроби`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №7</h3>
+            <div class="task__text">
+              <span
+                >Вивести на екран N абзаців (N вводиться користувачем) за
+                зразком:</span
+              >
+              <img src="./img/03.jpg" alt="Image" />
+            </div>
+            <script>
+              "use strict";
+              let howManyParagraph = parseInt(
+                prompt("Скільки парагрфів бажаєте створити")
+              );
+              const numberOfSection = howManyParagraph;
+              let numberOfParagraph = 1;
+
+              //===================== Спосіб №1 while =======================
+              if (howManyParagraph > 0) {
+                document.write(` <h1>Заголовок ${numberOfSection}</h1>`);
+                while (howManyParagraph > 0) {
+                  document.write(
+                    `<p>Розділ ${numberOfSection}, параграф ${numberOfParagraph}</p>`
+                  );
+                  howManyParagraph -= 1;
+                  numberOfParagraph++;
+                }
+                document.write(`<hr />`);
+              } else {
+                document.write("Вкажіть більшу кількість параграфів");
+              }
+
+              //===================== Спосіб №2 for =======================
+              howManyParagraph = numberOfSection;
+              if (howManyParagraph > 0) {
+                document.write(` <h1>Заголовок ${numberOfSection}</h1>`);
+                for (let j = 1; j <= howManyParagraph; j++) {
+                  document.write(
+                    `<p>Розділ ${numberOfSection}, параграф ${j}</p>`
+                  );
+                }
+              } else {
+                document.write("Вкажіть більшу кількість параграфів");
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

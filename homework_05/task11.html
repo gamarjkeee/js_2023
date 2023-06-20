@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-11</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №11</h3>
+            <div class="task__text">
+              Знайти суму 5 непарних чисел, що знаходяться між заданими
+              користувачем числами.
+            </div>
+            <script>
+              "use strict";
+              let startInterval = parseInt(prompt("Задайте початкове число"));
+              let endInterval = parseInt(prompt("Задайте кінцеве число"));
+              let summOddNumbers = 0;
+              let count = 0;
+              while (count !== 5) {
+                let randomNumber =
+                  startInterval +
+                  Math.floor(Math.random() * (endInterval - startInterval + 1));
+                if (randomNumber % 2 !== 0) {
+                  summOddNumbers += randomNumber;
+                  count++;
+                  document.write(`${count})  ${randomNumber} </br>`);
+                }
+              }
+              document.write(
+                `На інтервелі чисел від ${startInterval} до ${endInterval} сума п'яти непарних чисел = ${summOddNumbers}`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

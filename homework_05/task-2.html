@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task--2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №-2</h3>
+            <div class="task__text">
+              Поступово генерувати 100 випадкових чисел від 1 до 1000.
+              Підрахувати яких чисел більше: парних чи непарних.
+            </div>
+            <script>
+              "use strict";
+              let evenNumbers = 0;
+              let oddNumbers = 0;
+              const MIN_NUMBER = 1;
+              const MAX_NUMBER = 1000;
+              for (let i = 0; i < 100; i++) {
+                let randomNumber =
+                  MIN_NUMBER +
+                  Math.floor(Math.random() * (MAX_NUMBER - MIN_NUMBER + 1));
+                if (randomNumber % 2 === 0) {
+                  evenNumbers += 1;
+                } else {
+                  oddNumbers += 1;
+                }
+              }
+              if (evenNumbers > oddNumbers) {
+                alert(
+                  `Парних чисел випало більше, а саме ${evenNumbers} зі 100. Оновіть сторінку щоб повторити експеримент`
+                );
+              } else if (oddNumbers > evenNumbers) {
+                alert(
+                  `Непарних чисел випало більше, а саме ${oddNumbers} зі 100. Оновіть сторінку щоб повторити експеримент`
+                );
+              } else {
+                alert(
+                  "Парних і непарних чисел випало однаково. По 50. Оновіть сторінку щоб повторити експеримент"
+                );
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_05 task-6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №5</h1>
+      </header>
+      <main class="page">
+        <div class="page__results">
+          <div class="page__task task">
+            <a href="index.html" class="task__button">повернутися на головну</a>
+            <h3 class="task__title">Задача №6</h3>
+            <div class="task__text">
+              <span
+                >Вивести 3 таблиці (по 3 рядки і 3 стовпці у кожній) за
+                зразком</span
+              >
+              <img src="./img/02.jpg" alt="Image" />
+            </div>
+            <script>
+              "use strict";
+              let confirmation = confirm(
+                "Для перевікри роботи формули можна задати кількість окремих блоків, рядків та стовпців. Якщо бажаєте задати параметри натисніть ОК, інакше будуть діяти стандартні параметри задачі №6"
+              );
+              if (confirmation) {
+                let itemsNum = parseInt(
+                  prompt("Введіть кількість табличних блоків")
+                );
+                let rowsNum = parseInt(
+                  prompt("Введіть кількість рядків в таблиці")
+                );
+                let columnsNum = parseInt(
+                  prompt("Введіть кількість колонок в таблиці")
+                );
+                document.write(`<div class="tables">`);
+                for (let a = 1; a <= itemsNum; a++) {
+                  document.write(`<table>`);
+                  for (let i = 1; i <= rowsNum; i++) {
+                    document.write(`<tr>`);
+                    for (let j = 1; j <= columnsNum; j++) {
+                      document.write(
+                        `<td>${
+                          j +
+                          (i - 1) * columnsNum +
+                          (a - 1) * (rowsNum * columnsNum)
+                        }</td>`
+                      );
+                    }
+                    document.write(`</td>`);
+                  }
+                  document.write(`</table>`);
+                }
+                document.write(`</div>`);
+              } else {
+                document.write(`<div class="tables">`);
+                for (let a = 1; a <= 3; a++) {
+                  document.write(`<table>`);
+                  for (let i = 1; i <= 3; i++) {
+                    document.write(`<tr>`);
+                    for (let j = 1; j <= 3; j++) {
+                      document.write(
+                        `<td>${j + (i - 1) * 3 + (a - 1) * 9}</td>`
+                      );
+                    }
+                    document.write(`</td>`);
+                  }
+                  document.write(`</table>`);
+                }
+                document.write(`</div>`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span>
+        <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>
