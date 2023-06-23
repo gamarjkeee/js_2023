@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_06 task-0</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №6</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №0</h2>
+          <div class="container__text">
+            <p>Вивести на екран:</p>
+            <ul>
+              <li>A B C D E</li>
+              <li>B C D E F</li>
+              <li>C D E F G</li>
+              <li>D E F G H</li>
+              <li>E F G H I</li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let codeOfFirstLetter = 65;
+              for (let j = 0; j < 5; j++) {
+                for (let i = 0; i < 5; i++) {
+                  let letter = String.fromCharCode(codeOfFirstLetter + i);
+                  document.write(`${letter} `);
+                }
+                codeOfFirstLetter++;
+                document.write(`<br>`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

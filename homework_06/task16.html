@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_06 task-16</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №6</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №16</h2>
+          <div class="container__text">
+            <p>
+              Знайти суму всіх непарних чисел з діапазону, який вводить
+              користувач з клавіатури.
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              const firstUserNum = parseInt(prompt("Введіть перше число"));
+              const lastUserNum = parseInt(prompt("Введіть перше число"));
+              let total = 0;
+              for (let i = firstUserNum; i <= lastUserNum; i++) {
+                if (i % 2 !== 0) {
+                  total += i;
+                }
+              }
+              document.write(
+                `Сума непарних чисел в діапазоні з ${firstUserNum} до ${lastUserNum} = ${total}`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

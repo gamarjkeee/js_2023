@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_06 task-20</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №6</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №20</h2>
+          <div class="container__text center">
+            <p>
+              Щоденно спортзал відвідує певна кількість людей. Користувач
+              вводить такі дані: скільки людей відвідало спортзал за день та вік
+              кожного відвідувача. Потрібно вивести вік найстаршого та
+              наймолодшого відвідувачів, а також середній вік всіх відвідувачів
+              спортзалу за день.
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              const numberOfPeople = parseInt(
+                prompt("Введіть кількість людей що відвідали спортзал")
+              );
+              let age;
+              let totalAge = 0;
+              let maxAge = -Infinity;
+              let minAge = Infinity;
+              for (let i = 1; i <= numberOfPeople; i++) {
+                age = parseInt(prompt(`Введіть вік відвідувача №${i}`));
+                totalAge += age;
+                if (age > maxAge) maxAge = age;
+                if (age < minAge) minAge = age;
+              }
+
+              document.write(
+                `Загальна кількість відвідувачів = ${numberOfPeople} <br> Найстаршому - ${maxAge} р. <br> Наймолодшому - ${minAge} р. <br> Середній вік - ${(
+                  totalAge / numberOfPeople
+                ).toFixed(0)} р.`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_06 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №6</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №5</h2>
+          <div class="container__text">
+            <p>
+              Інвестор вклав S тис. грн на 20 років під 20% річних. Визначити за
+              допомогою циклів суму, яку він одержить (без оподаткування).
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              const startSum = parseInt(prompt("Вкажіть суму в грн"));
+              const percentageOfProfit = 20;
+              let result = startSum;
+              for (let i = 0; i < 20; i++) {
+                result = result + (result * percentageOfProfit) / 100;
+              }
+              document.write(
+                `При вкладених ${startSum} грн на 20 років під 20% річних ви отримаєте ${result.toFixed(
+                  0
+                )} грн`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

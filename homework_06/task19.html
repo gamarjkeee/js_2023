@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_06 task-19</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №6</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №19</h2>
+          <div class="container__text center">
+            <p>
+              Написати програму, яка показуватиме на екрані піднесене до
+              квадрату число, що вводиться користувачем. Користувач вирішує
+              самостійно – виходити з програми або продовжувати ввід. (Підказка:
+              потрібно запустити нескінчений цикл, в тілі якого передбачити його
+              переривання у випадку настання певної умови).
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let userNum;
+              let result;
+              for (let i = 0; ; i++) {
+                userNum = parseInt(
+                  prompt("Введіть число яке треба піднести до квадрату")
+                );
+                if (userNum) {
+                  result = userNum * userNum;
+                  alert(result);
+                } else break;
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

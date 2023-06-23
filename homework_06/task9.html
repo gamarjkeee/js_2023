@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_06 task-9</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №6</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №9</h2>
+          <div class="container__text">
+            <p>Вивести на екран</p>
+            <ul>
+              <li>1 1</li>
+              <li>2 1 2</li>
+              <li>2 1 2</li>
+              <li>3 1 2 3</li>
+              <li>4 1 2 3 4</li>
+              <li>i 1 2 3 ..i</li>
+              <li>23 1 2 3 .. 22 23</li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              for (let i = 1; i <= 23; i++) {
+                document.write(i);
+                for (let j = 1; j <= i; j++) {
+                  document.write(` ${j} `);
+                }
+                document.write(`<br>`);
+              }
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>
