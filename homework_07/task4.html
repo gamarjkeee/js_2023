@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_07 task-4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №7</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №4</h2>
+          <div class="container__text">
+            <p>
+              Створити функцію, яка для 3 заданих чисел знаходить одночасно
+              декілька результатів: кількість парних, кількість додатних,
+              кількість більших за 100.
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let result;
+              function multitasking() {
+                let numberOfEven = 0;
+                let numberOfPositive = 0;
+                let numberOver100 = 0;
+                for (let i = 1; i <= 3; i++) {
+                  let num = parseInt(prompt(`Введіть число №${i}`));
+                  document.write(`${num} `);
+                  if (num % 2 === 0) numberOfEven++;
+                  if (num > 0) numberOfPositive++;
+                  if (num > 100) numberOver100++;
+                }
+                result = [numberOfEven, numberOfPositive, numberOver100];
+                return result;
+              }
+              multitasking();
+              document.write(
+                `<br> 1) кількість парних = ${result[0]} <br> 2) кількість додатних = ${result[1]} <br> 3) кількість більших за 100 = ${result[2]}`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

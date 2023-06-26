@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_07 task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №7</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №1</h2>
+          <div class="container__text">
+            <p>Створити функцію, яка за номером місяця повертає його назву.</p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              const numberOfMonth = parseInt(prompt("Введіть номер місяця"));
+              function nameOfMounth(numberOfMonth) {
+                let result;
+                if (numberOfMonth === 1) result = "Січень";
+                else if (numberOfMonth === 2) result = "Лютий";
+                else if (numberOfMonth === 3) result = "Березень";
+                else if (numberOfMonth === 4) result = "Квітень";
+                else if (numberOfMonth === 5) result = "Травень";
+                else if (numberOfMonth === 6) result = "Червень";
+                else if (numberOfMonth === 7) result = "Липень";
+                else if (numberOfMonth === 8) result = "Серпень";
+                else if (numberOfMonth === 9) result = "Вересень";
+                else if (numberOfMonth === 10) result = "Жовтень";
+                else if (numberOfMonth === 11) result = "Листопад";
+                else if (numberOfMonth === 12) result = "Грудень";
+                return result;
+              }
+              document.write(nameOfMounth(numberOfMonth));
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_07 task-6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №7</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №6</h2>
+          <div class="container__text">
+            <p>
+              Створити функцію, яка створює таблицю з вказаною кількістю рядків
+              і стовпців (таблиця заповнюється заданим фіксованим
+              повідомленням).
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              function tableBuilder() {
+                let numberOfRows = parseInt(prompt("Введіть кількість рядків"));
+                let numberOfColumns = parseInt(
+                  prompt("Введіть кількість стовпців")
+                );
+                document.write(`<table style="border: 2px solid black">`);
+                for (let i = 0; i < numberOfRows; i++) {
+                  document.write(`<tr>`);
+                  for (let j = 0; j < numberOfColumns; j++) {
+                    document.write(
+                      `<td style="border: 2px solid black; padding:5px">🙂</td>`
+                    );
+                  }
+                  document.write(`</tr>`);
+                }
+                document.write(`</table>`);
+              }
+              tableBuilder();
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

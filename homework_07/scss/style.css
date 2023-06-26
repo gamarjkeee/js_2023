@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(121, 59, 107, 0.95);
+}
+.header h1 {
+  font-size: clamp(1.375rem, 1.102rem + 1.36vw, 2.125rem);
+  font-weight: 700;
+}
+
+.page {
+  background-color: rgba(121, 59, 107, 0.3);
+  padding-top: 100px;
+  padding-bottom: 60px;
+}
+.page__items {
+  padding: 0 3px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(314px, 1fr));
+  gap: 3px;
+}
+.item-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 20px 0 20px;
+  transition: all 0.3s ease;
+  background-color: rgba(230, 63, 191, 0.6);
+  border: 1px solid 121, 59, 107, 0.3;
+}
+@media (any-hover: hover) {
+  .item-page:hover {
+    box-shadow: inset 0 0 30px rgb(121, 59, 107);
+    transform: scale(0.975);
+  }
+  .item-page:hover .item-page__link {
+    box-shadow: inset 0 0 30px rgb(121, 59, 107);
+  }
+}
+.item-page__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.item-page__text {
+  flex: 1 1 auto;
+  margin-bottom: 10px;
+}
+.item-page__text p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.item-page__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  width: calc(100% + 40px);
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-weight: 700;
+}
+@media (any-hover: hover) {
+  .item-page__link:hover {
+    background-color: rgba(121, 59, 107, 0.5);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(230, 63, 191, 0.6);
+  padding: 20px;
+}
+.container__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-weight: 700;
+  background-color: rgba(121, 59, 107, 0.4);
+  margin-bottom: 15px;
+}
+@media (any-hover: hover) {
+  .container__link:hover {
+    background-color: rgba(121, 59, 107, 0.8);
+  }
+}
+.container__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.container__text {
+  flex: 1 1 auto;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+.container__text p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.container__script {
+  background-color: rgba(125, 28, 142, 0.4);
+  margin: 0 -20px -20px;
+  padding: 20px;
+}
+.container__result {
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 15px;
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  background-color: rgba(121, 59, 107, 0.95);
+}
+.footer span {
+  font-size: 14px;
+}/*# sourceMappingURL=style.css.map */

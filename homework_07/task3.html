@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_07 task-3</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №7</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №3</h2>
+          <div class="container__text">
+            <p>Створити окремі функції, які для 4 чисел знаходять:</p>
+            <ul>
+              <li>1) суму;</li>
+              <li>2) добуток;</li>
+              <li>3) середнє арифметичне;</li>
+              <li>4) мінімальне значення.</li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              const num1 = parseInt(prompt("Введіть перше число"));
+              const num2 = parseInt(prompt("Введіть друге число"));
+              const num3 = parseInt(prompt("Введіть третє число"));
+              const num4 = parseInt(prompt("Введіть четверте число"));
+
+              function summ(num1, num2, num3, num4) {
+                let result = num1 + num2 + num3 + num4;
+                return result;
+              }
+
+              function product(num1, num2, num3, num4) {
+                let result = num1 * num2 * num3 * num4;
+                return result;
+              }
+
+              function arithmeticMean(num1, num2, num3, num4) {
+                let result = (num1 * num2 * num3 * num4) / 4;
+                return result;
+              }
+
+              function minValue(num1, num2, num3, num4) {
+                let result = Infinity;
+                if (result > num1) result = num1;
+                if (result > num2) result = num2;
+                if (result > num3) result = num3;
+                if (result > num4) result = num4;
+                return result;
+              }
+
+              document.write(
+                `Задані числа ${num1}, ${num2}, ${num3}, ${num4} <br> Сума = ${summ(
+                  num1,
+                  num2,
+                  num3,
+                  num4
+                )} <br> Добуток = ${product(
+                  num1,
+                  num2,
+                  num3,
+                  num4
+                )} <br> Середнє арифметичне = ${arithmeticMean(
+                  num1,
+                  num2,
+                  num3,
+                  num4
+                )} <br> Мінімальне значення = ${minValue(
+                  num1,
+                  num2,
+                  num3,
+                  num4
+                )}`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_07 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №7</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №5</h2>
+          <div class="container__text">
+            <p>Створити окремі функції, які переводять:</p>
+            <ul>
+              <li>1) Сантиметри у дюйми;</li>
+              <li>2) Кілограми у фунти;</li>
+              <li>3) Кілометри у милі.</li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let lengthInInches;
+              let lengthInCentimeters;
+              let weightInKilograms;
+              let weightInPounds;
+              let distanceInKilometers;
+              let distanceInMiles;
+              function fromCentimetersToInches() {
+                lengthInCentimeters = parseFloat(
+                  prompt("Введіть досжину в сантиметрах")
+                );
+                lengthInInches = lengthInCentimeters * 0.3937;
+                return lengthInInches;
+              }
+
+              function fromKilogramsToPounds() {
+                weightInKilograms = parseFloat(
+                  prompt("Введіть вагу в кілограмах")
+                );
+                weightInPounds = lengthInCentimeters * 2.2046;
+                return weightInPounds;
+              }
+
+              function fromKilometersToMiles() {
+                distanceInKilometers = parseFloat(
+                  prompt("Введіть відстань в кілометрах")
+                );
+                distanceInMiles = distanceInKilometers * 0.62137;
+                return distanceInMiles;
+              }
+
+              fromCentimetersToInches();
+              fromKilogramsToPounds();
+              fromKilometersToMiles();
+              document.write(
+                `1) ${lengthInCentimeters} см = ${lengthInInches} дюймів <br> 2) ${weightInKilograms} кг = ${weightInPounds} фунтів <br> 3) ${distanceInKilometers} км = ${distanceInMiles} миль`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>
