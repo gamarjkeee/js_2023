@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_08 task-2</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №8</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №2</h2>
+          <div class="container__text">
+            <p>
+              Дано масив, який зберігає кількість відвідувачів магазину протягом
+              тижня. Вивести на екран:
+            </p>
+            <ul>
+              <li>
+                1) номери днів, протягом яких кількість відвідувачів була меншою
+                за 20;
+              </li>
+              <li>
+                2) номери днів, коли кількість відвідувачів була мінімальною;
+              </li>
+              <li>
+                3) номери днів, коли кількість відвідувачів була максимальною;
+              </li>
+              <li>
+                4) загальну кількість клієнтів у робочі дні та окремо загальну
+                кількість днів на вихідних.
+              </li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              //--------- 1) номери днів, протягом яких кількість відвідувачів була меншою за 20------------------------------
+
+              const numberOfClients = [20, 44, 7, 12, 22, 44, 7];
+              document.write(`Наш масив = ${numberOfClients} <br><br>`);
+              //---------------------------За допомогою функції------------------
+              function lessThan20(arr) {
+                let valuesLessThan = [];
+                for (let i = 0; i < arr.length; i++) {
+                  if (arr[i] < 20) {
+                    valuesLessThan.push(i + 1);
+                  }
+                }
+                return valuesLessThan;
+              }
+              document.write(`1) Номери днів, протягом яких кількість відвідувачів була меншою
+                              за 20 - ${lessThan20(numberOfClients)} <br>`);
+              //---------------------------За допомогою циклу------------------
+              for (let i = 0; i < numberOfClients.length; i++) {
+                if (numberOfClients[i] < 20)
+                  document.write(
+                    `День №${i + 1} кількість відвідувачів = ${
+                      numberOfClients[i]
+                    } <br>`
+                  );
+              }
+
+              document.write(`<br>`);
+              //-------------- 2) номери днів, коли кількість відвідувачів була мінімальною;-------------------------
+              function theLeastAmount(arr) {
+                let theLeastAmountDays = [];
+                let min = Infinity;
+                for (let i = 0; i < arr.length; i++) {
+                  if (arr[i] < min) {
+                    min = arr[i];
+                    theLeastAmountDays.length = 0;
+                    theLeastAmountDays.push(i + 1);
+                  } else if (arr[i] === min) {
+                    theLeastAmountDays.push(i + 1);
+                  }
+                }
+                return theLeastAmountDays;
+              }
+              document.write(
+                `2) номери днів, коли кількість відвідувачів була мінімальною - ${theLeastAmount(
+                  numberOfClients
+                )} <br>`
+              );
+
+              //---------------- 3) номери днів, коли кількість відвідувачів була максимальною;-------------------------
+
+              function theMostProfitableDays(arr) {
+                let theMostProfitableDaysList = [];
+                let max = -Infinity;
+                for (let i = 0; i < arr.length; i++) {
+                  if (arr[i] > max) {
+                    max = arr[i];
+                    theMostProfitableDaysList.length = 0;
+                    theMostProfitableDaysList.push(i + 1);
+                  } else if (arr[i] === max) {
+                    theMostProfitableDaysList.push(i + 1);
+                  }
+                }
+                return theMostProfitableDaysList;
+              }
+              document.write(
+                `3) номери днів, коли кількість відвідувачів була максимальною - ${theMostProfitableDays(
+                  numberOfClients
+                )} <br>`
+              );
+
+              //---------------- 4)  загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних.-----------------
+              function summOfClients(arr) {
+                let summ = 0;
+                for (let i = 0; i < arr.length; i++) {
+                  summ += arr[i];
+                }
+                return summ;
+              }
+
+              let summOfClientsForTheWeekend = (arr) => {
+                let summ = 0;
+                for (let i = 5; i < arr.length; i++) {
+                  summ += arr[i];
+                }
+                return summ;
+              };
+
+              let summOfClientsOnWorkingDays =
+                summOfClients(numberOfClients) -
+                summOfClientsForTheWeekend(numberOfClients);
+
+              document.write(
+                `4) Загальна кількість клієнтів = ${summOfClients(
+                  numberOfClients
+                )} <br>`
+              );
+              document.write(
+                `Кількість клієнтів на вихідні =  ${summOfClientsForTheWeekend(
+                  numberOfClients
+                )} <br>`
+              );
+              document.write(
+                `Кількість клієнтів в робочі дні = ${summOfClientsOnWorkingDays} <br>`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

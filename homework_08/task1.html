@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_08 task-1</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №8</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №1</h2>
+          <div class="container__text">
+            <p>
+              Дано масив, який містить оцінки з К предметів. Знайти середній бал
+              і з’ясувати до якої категорії він відноситься (відмінник,
+              двійочник (має хоча би одну двійку), хорошист (оцінки добре і
+              відмінно), трійочник(є хоча би одна трійка)).
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let howManyMarks = parseInt(prompt("Введіть кількість оцінок"));
+
+              function createArr(arrLenght) {
+                let arr = [];
+                for (let i = 0; i < arrLenght; i++) {
+                  let randomMark = 2 + Math.floor(Math.random() * 4);
+                  arr.push(randomMark);
+                }
+                return arr;
+              }
+
+              function minValueOfArr(arr) {
+                let min = arr[0];
+                for (let i = 1; i < arr.length; i++) {
+                  if (min > arr[i]) min = arr[i];
+                }
+                return min;
+              }
+
+              function getResult(minValue) {
+                let result;
+                switch (minValue) {
+                  case 2:
+                    result = "Двійочник";
+                    break;
+                  case 3:
+                    result = "Трійочник";
+                    break;
+                  case 4:
+                    result = "Хорошист";
+                    break;
+                  case 5:
+                    result = "Відмінник";
+                    break;
+                  default:
+                    throw new Error("Некоректна оцінка");
+                    break;
+                }
+                return result;
+              }
+
+              let marks = createArr(howManyMarks);
+              let minValue = minValueOfArr(marks);
+              alert(getResult(minValue));
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

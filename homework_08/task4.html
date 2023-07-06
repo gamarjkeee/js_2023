@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_08 task-4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №8</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №4</h2>
+          <div class="container__text">
+            <p>
+              Дано послідовність номерів автомобілів. Підрахувати кількість
+              номерів, які :
+            </p>
+            <ul>
+              <li>1) починаються на букву «А»;</li>
+              <li>2) перша і остання літери співпадають;</li>
+              <li>3) складаються з більше ніш 5 символів;</li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let listOfCarNumbers = [
+                "ВМ1777АХ",
+                "АА1787ВН",
+                "ВХ6977ВА",
+                "АА9999ВЕ",
+                "ВН6040ЕЕ",
+                "СВ8136АХ",
+                "МАЖОР",
+                "ВЕ8180ВВ",
+              ];
+              document.write(
+                `Наш список номерів - ${listOfCarNumbers} <br><br>`
+              );
+              //---------- 1) починаються на букву «А» ----------------
+              let letter = "А";
+
+              function firstLetter(letter, array) {
+                let count = 0;
+                array.forEach((element) => {
+                  if (element[0] === letter) count++;
+                });
+                return count;
+              }
+
+              document.write(
+                ` 1) починаються на букву «${letter}» - ${firstLetter(
+                  letter,
+                  listOfCarNumbers
+                )} шт <br>`
+              );
+
+              //---------- 2) перша і остання літери співпадають ----------------
+
+              function AreThrFirstLetterAndTheLastLettesTheSame(array) {
+                let count = 0;
+                array.forEach((element) => {
+                  if (element[0] === element[element.length - 1]) count++;
+                });
+                return count;
+              }
+
+              document.write(
+                ` 2) перша і остання літери співпадають - ${AreThrFirstLetterAndTheLastLettesTheSame(
+                  listOfCarNumbers
+                )} разів <br>`
+              );
+
+              //---------- 3) складаються з більше ніш 5 символів ----------------
+
+              function moreThanFive(array) {
+                let count = 0;
+                array.forEach((element) => {
+                  if (element.length > 5) count++;
+                });
+                return count;
+              }
+
+              document.write(
+                ` 3) складаються з більше ніш 5 символів - ${moreThanFive(
+                  listOfCarNumbers
+                )} разів <br>`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

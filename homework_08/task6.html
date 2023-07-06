@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_08 task-6</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №8</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №6</h2>
+          <div class="container__text">
+            <p>
+              Дано послідовність цін товарів та назв (у окремих масивах).
+              Вивести на екран ті, які може собі дозволити користувач (кількість
+              грошей задається).
+            </p>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              const userMoney = parseFloat(
+                prompt("Яку суму грошей ви маєте?", 500)
+              );
+              const productsPrices = [20, 100, 55, 600, 89, 452, 7, 1600];
+              const productsNames = [
+                "Сухарики",
+                "Сир твердий 300г",
+                "Сік 1л",
+                "Вино напівсухе Нова Зеландія",
+                "Шоколадка",
+                "Іграшка дитяча",
+                "Сірники",
+                "Віскі",
+              ];
+
+              function getArraOfPositiont(
+                userMoney,
+                productsPrices,
+                productsNames
+              ) {
+                let products = [];
+                productsPrices.forEach((element, index) => {
+                  if (element <= userMoney) products.push(productsNames[index]);
+                });
+                return products;
+              }
+
+              document.write(
+                `Список продуктів які ви можете купити - ${getArraOfPositiont(
+                  userMoney,
+                  productsPrices,
+                  productsNames
+                )}
+              `
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>

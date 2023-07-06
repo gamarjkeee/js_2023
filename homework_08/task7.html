@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_08 task-7</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>Домашнє завдання №8</h1>
+      </header>
+      <main class="page">
+        <div class="page__container container">
+          <a href="index.html" class="container__link"
+            >повернутися на головну</a
+          >
+          <h2 class="container__title">Завдання №7</h2>
+          <div class="container__text">
+            <p>
+              Дано послідовність платіжок протягом року. Знайти сумарну
+              кількість грошей за:
+            </p>
+            <ul>
+              <li>за весь рік;</li>
+              <li>у першій половині року;</li>
+              <li>у другій половині року;</li>
+              <li>за літо;</li>
+              <li>за ІІ квартал;</li>
+              <li>за парні місяці (з парними номерами);</li>
+              <li>
+                за місяці, які є початковими у сезоні (весна, літо, осінь,
+                зима).
+              </li>
+            </ul>
+          </div>
+          <div class="container__script">
+            <h3 class="container__result">Результат роботи JS коду:</h3>
+            <script>
+              "use strict";
+              let listOfPayments = [];
+              for (let i = 0; i < 12; i++) {
+                let randomPayments = 500 + Math.floor(Math.random() * 1999);
+                listOfPayments.push(randomPayments);
+              }
+
+              document.write(`${listOfPayments}<br><br>`);
+
+              //------------ за весь рік ------------------
+
+              function total(listOfPayments) {
+                let summ = 0;
+                listOfPayments.forEach((element) => {
+                  summ += element;
+                });
+                return summ;
+              }
+
+              document.write(
+                `Загальна сума платіжок за рік = ${total(
+                  listOfPayments
+                )} грн <br>`
+              );
+
+              //------------ у першій половині року ------------------
+
+              function getSummOfFirstHalfOfYear(listOfPayments) {
+                let summ = 0;
+                for (let i = 0; i < 6; i++) {
+                  summ += listOfPayments[i];
+                }
+                return summ;
+              }
+
+              document.write(
+                `Сума платіжок за перше півріччя = ${getSummOfFirstHalfOfYear(
+                  listOfPayments
+                )} грн <br>`
+              );
+
+              //------------ у другій половині року ------------------
+
+              function getSummOfSecondHalfOfYear(listOfPayments) {
+                let summ = 0;
+                for (let i = 6; i < 12; i++) {
+                  summ += listOfPayments[i];
+                }
+                return summ;
+              }
+
+              document.write(
+                `Сума платіжок за друге півріччя = ${getSummOfSecondHalfOfYear(
+                  listOfPayments
+                )} грн <br>`
+              );
+
+              //------------ за літо ------------------
+
+              function getSummOfSummer(listOfPayments) {
+                let summ = 0;
+                for (let i = 5; i < 8; i++) {
+                  summ += listOfPayments[i];
+                }
+                return summ;
+              }
+
+              document.write(
+                `Сума платіжок за літо = ${getSummOfSummer(
+                  listOfPayments
+                )} грн <br>`
+              );
+
+              //------------ за ІІ квартал ------------------
+
+              function getSummOfSecondQuarter(listOfPayments) {
+                let summ = 0;
+                for (let i = 3; i < 6; i++) {
+                  summ += listOfPayments[i];
+                }
+                return summ;
+              }
+
+              document.write(
+                `Сума платіжок за ІІ квартал = ${getSummOfSecondQuarter(
+                  listOfPayments
+                )} грн <br>`
+              );
+
+              //------------ за парні місяці (з парними номерами) ------------------
+
+              function getSummOfEvenMounths(listOfPayments) {
+                let summ = 0;
+                for (let i = 1; i < 12; i += 2) {
+                  summ += listOfPayments[i];
+                }
+                return summ;
+              }
+
+              document.write(
+                `Сума платіжок за парні місяці (з парними номерами) = ${getSummOfEvenMounths(
+                  listOfPayments
+                )} грн <br>`
+              );
+
+              //------------  за місяці, які є початковими у сезоні (весна, літо, осінь, зима) ------------------
+
+              function getSummOfFirstMounthsOfSeason(listOfPayments) {
+                let summ = 0;
+                for (let i = 2; i < 12; i += 3) {
+                  summ += listOfPayments[i];
+                }
+                return summ;
+              }
+
+              document.write(
+                `за місяці, які є початковими у сезоні (весна, літо, осінь, зима) = ${getSummOfFirstMounthsOfSeason(
+                  listOfPayments
+                )} грн <br>`
+              );
+            </script>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <span>Курс JS 2023</span> <span>виконав Мусієнко Руслан</span>
+      </footer>
+    </div>
+  </body>
+</html>
