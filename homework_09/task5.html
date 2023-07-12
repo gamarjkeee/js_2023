@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_09 task-5</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">Курс JS 2023 (Літо). Домашнє завдання №9</header>
+      <main class="page">
+        <div class="page__task task-page">
+           <a href="index.html" class="task-page__link link">поернутися на головну</a>
+           <h2 class="task-page__title title">Завдання №5</h2>
+           <div class="task-page__text text">
+            <p>Дано масив елементів. Знайти добуток додатніх елементів</p>
+           </div>
+            <div class="task-page__result">
+              <script>
+                "use strict"
+          let arr = [-2,3,5,-15,1,2,25,-8,-32,4]
+          document.write(`Наш масив [${arr}] <br><br>`)
+          let product = 1;
+                for (const el of arr) {
+                  el > 0 ? product *= el : product = product;
+                }
+                document.write(product)
+               </script>
+           </div>
+        </div>
+      </main>
+      <footer class="footer">Виконав Мусієнко Руслан</footer>
+    </div>
+  </body>
+</html>

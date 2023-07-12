@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_09 task-10</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">Курс JS 2023 (Літо). Домашнє завдання №9</header>
+      <main class="page">
+        <div class="page__task task-page">
+           <a href="index.html" class="task-page__link link">поернутися на головну</a>
+           <h2 class="task-page__title title">Завдання №10</h2>
+           <div class="task-page__text text">
+            <p>Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого податку у грн.</p>
+           </div>
+            <div class="task-page__result">
+              <p>
+              <script>
+                "use strict"
+                   let arr = [20,30,10,50,170,25,70]
+                  document.write(`Наш масив [${arr}] <br><br>`)
+                   let resultArr = arr.reduce((prevSum, el) => prevSum + el * 0.2, 0)
+                   document.write(resultArr)
+             </script>
+               </p>
+           </div>
+        </div>
+      </main>
+      <footer class="footer">Виконав Мусієнко Руслан</footer>
+    </div>
+  </body>
+</html>

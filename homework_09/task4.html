@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <script defer src="./js/script.js"></script>
+    <title>Homework_09 task-4</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">Курс JS 2023 (Літо). Домашнє завдання №9</header>
+      <main class="page">
+        <div class="page__task task-page">
+           <a href="index.html" class="task-page__link link">поернутися на головну</a>
+           <h2 class="task-page__title title">Завдання №4</h2>
+           <div class="task-page__text text">
+            <p>Дано масив елементів. Вивести на екран елементи, що більші за 100</p>
+           </div>
+            <div class="task-page__result">
+              <script>
+                "use strict"
+          let arr = [20,30,50,150,10,200,250,80,320,40]
+          document.write(`Наш масив [${arr}] <br><br>`)
+          for (const el of arr) {
+           if (el > 100) 
+           document.write(`${el} `)
+          }
+               </script>
+           </div>
+        </div>
+      </main>
+      <footer class="footer">Виконав Мусієнко Руслан</footer>
+    </div>
+  </body>
+</html>
